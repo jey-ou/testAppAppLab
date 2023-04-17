@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">testApp-AppLab</string>
+    <string name="nav_signIn">Sign In</string>
+    <string name="nav_signUp">Sign Up</string>
+    <string name="signUp_username">name</string>
+    <string name="signUp_mobile">GSM number</string>
+    <string name="signUp_email">email address</string>
+    <string name="signUp_paswoord">password</string>
+    <string name="logo">Logo veilig thuis</string>
+    <string name="logIn_password">password</string>
+    <string name="logIn_name">name</string>
+    <string name="login_email">email address</string>
+    <string name="nav_logIn">Log in</string>
+    <string name="molecule_name">naam</string>
+    <string name="molecule_1Letter">A</string>
+    <string name="molecule_3Letter">AUB</string>
+
+    <string-array name="amino_acids_full_text">
+        <item>Alanine</item>
+        <item>Arginine</item>
+        <item>Aspagine</item>
+        <item>Aspartic Acid</item>
+        <item>Cysteine</item>
+        <item>Feylalanine</item>
+        <item>Glutamine</item>
+        <item>Glutamic Acid</item>
+        <item>Glycine</item>
+        <item>Histidne</item>
+        <item>Isoleucine</item>
+        <item>Leucine</item>
+        <item>Lyscine</item>
+        <item>Methionine</item>
+        <item>Proline</item>
+        <item>Pyrrolysine</item>
+        <item>Selenocysteïne</item>
+        <item>Serine</item>
+        <item>Threonine</item>
+        <item>Tryptophan</item>
+        <item>Tyrosine</item>
+        <item>Valine</item>
+    </string-array>
+
+    <string-array name="amino_acids_three_letter_txt">
+        <item>Ala</item>
+        <item>Arg</item>
+        <item>Asn</item>
+        <item>Asp</item>
+        <item>Cys</item>
+        <item>Phe</item>
+        <item>Gln</item>
+        <item>Glu</item>
+        <item>Gly</item>
+        <item>His</item>
+        <item>Ile</item>
+        <item>Leu</item>
+        <item>Lys</item>
+        <item>Met</item>
+        <item>Pro</item>
+        <item>Pyl</item>
+        <item>Sec</item>
+        <item>Ser</item>
+        <item>Thr</item>
+        <item>Trp</item>
+        <item>Tyr</item>
+        <item>Val</item>
+    </string-array>
+
+    <string-array name="amino_acids_one_letter_txt">
+        <item>A</item>
+        <item>R</item>
+        <item>N</item>
+        <item>D</item>
+        <item>C</item>
+        <item>F</item>
+        <item>Q</item>
+        <item>E</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>L</item>
+        <item>K</item>
+        <item>M</item>
+        <item>P</item>
+        <item>O</item>
+        <item>U</item>
+        <item>S</item>
+        <item>T</item>
+        <item>W</item>
+        <item>Y</item>
+        <item>V</item>
+    </string-array>
+
+</resources>
