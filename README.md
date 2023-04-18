@@ -1,3 +1,3 @@
 # testAppAppLab
  testapp
-Met deze app worden de onderdelen voor het gezamelijk werk eerst getest
+Met deze app worden de onderdelen voor het goepswerk eerst getest
