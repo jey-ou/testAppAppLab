@@ -5,7 +5,8 @@
     android:id="@+id/AA_Title"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background= "@color/blueBlack"
+    android:background="@color/blueBlack"
+    android:padding="12dp"
     tools:context=".Voorbeelden.Aminozuren2Activity">
 
     <TextView
@@ -53,12 +54,14 @@
         android:id="@+id/AA_Description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
         android:text="TextView"
         android:textColor="@color/tanAccent"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/AA_Tile_3_Letters"
-        app:layout_constraintStart_toStartOf="@+id/AA_Title_1_Letter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AA_Title_1_Letter" />
 
     <ImageView
