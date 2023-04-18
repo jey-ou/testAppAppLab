@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/AA_Title"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background= "@color/blueBlack"
+    tools:context=".Voorbeelden.Aminozuren2Activity">
+
+    <TextView
+        android:id="@+id/AATitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textColor="@color/tanAccent"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AA_Image" />
+
+    <TextView
+        android:id="@+id/AA_Tile_3_Letters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="TextView"
+        android:textColor="@color/tanAccent"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.848"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AATitle" />
+
+    <TextView
+        android:id="@+id/AA_Title_1_Letter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textColor="@color/tanAccent"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/AA_Tile_3_Letters"
+        app:layout_constraintHorizontal_bias="0.158"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AATitle" />
+
+    <TextView
+        android:id="@+id/AA_Description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="TextView"
+        android:textColor="@color/tanAccent"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/AA_Tile_3_Letters"
+        app:layout_constraintStart_toStartOf="@+id/AA_Title_1_Letter"
+        app:layout_constraintTop_toBottomOf="@+id/AA_Title_1_Letter" />
+
+    <ImageView
+        android:id="@+id/AA_Image"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_alanine"
+        app:tint="@color/tanAccent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

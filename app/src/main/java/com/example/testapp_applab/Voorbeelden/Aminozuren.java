@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.testapp_applab.R;
@@ -42,17 +43,28 @@ public class Aminozuren extends AppCompatActivity implements RecyclerViewInterfa
         String[] aminoAcidNames = getResources().getStringArray(R.array.amino_acids_full_text);
         String[] aminoAcidAbreviations = getResources().getStringArray(R.array.amino_acids_one_letter_txt);
         String[] aminoAcidAbreviationSmall = getResources().getStringArray(R.array.amino_acids_three_letter_txt);
+        String[] aminoAcidDecription = getResources().getStringArray(R.array.amino_acids_description_txt);
 
         for(int i = 0; i<aminoAcidNames.length; i++){
             aminoAcidModels.add(new AminoAcidModel(aminoAcidNames[i],
                     aminoAcidAbreviations[i],
                     aminoAcidAbreviationSmall[i],
-                    aminoAcidImages[i]) );
+                    aminoAcidDecription[i],
+                    aminoAcidImages[i])) ;
+
         }
     }
 
     @Override
     public void onItemClick(int position) {
+        Intent intent = new Intent(Aminozuren.this, Aminozuren2Activity.class);
+        intent.putExtra("NAME", aminoAcidModels.get(position).getAminoAcidName());
+        intent.putExtra("ABBR_BIG", aminoAcidModels.get(position).getAminoAcidAbbreviation());
+        intent.putExtra( "ABBR_SMALL", aminoAcidModels.get(position).getAminoAcidAbreviationSmall());
+        intent.putExtra("DESCRIPTION", aminoAcidModels.get(position).getAminoAcidDecription());
+        intent.putExtra("IMAGE", aminoAcidModels.get(position).getImage());
+
+        startActivity(intent);
 
     }
 }
