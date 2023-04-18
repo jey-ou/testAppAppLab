@@ -90,9 +90,9 @@
         <item>V</item>
     </string-array>
     <string-array name="amino_acids_description_txt">
-        <item>Ala</item>
-        <item>Arg</item>
-        <item>Asn</item>
+        <item>Alanine is een klein, natuurlijk voorkomend aminozuur. Als een van de twintig α-aminozuren die voor eiwitsynthese worden gebruikt, maakt alanine deel uit van vrijwel elk eiwitmolecuul. De zijketen van alanine bestaat uit een methylgroep, waardoor het geclassificeerd wordt als een apolair en alifatisch aminozuur. Alanine is voor de mens niet essentieel; het lichaam is in staat alanine zelf aan te maken.</item>
+        <item>Arginine is een van de twintig natuurlijk voorkomende aminozuren. Het werd in 1895 voor het eerst geïsoleerd uit hoorn. Arginine wordt gecodeerd door de codons CGU, CGC, CGA, CGG, AGA en AGG.</item>
+        <item>Asparagine is een van de twintig natuurlijk voorkomende aminozuren. De naam werd afgeleid van asperge. In 1806 werd dit aminozuur door Nicolas-Louis Vauquelin en Jean-Pierre Robiquet voor het eerst uit het sap hiervan geïsoleerd. Het was het eerste aminozuur dat ooit werd geïsoleerd. De reactie tussen asparaginezuur en reducerende suikers of reactieve carbonylverbindingen leidt tot vorming van acrylamide in voeding, wanneer deze voldoende worden verhit. Zo wordt acrylamide gevormd bij onder meer frieten, aardappelchips en geroosterde koffiebonen.</item>
         <item>Asp</item>
         <item>Cys</item>
         <item>Phe</item>
