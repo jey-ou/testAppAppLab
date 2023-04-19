@@ -15,6 +15,7 @@ import java.util.ArrayList;
 public class Aminozuren extends AppCompatActivity implements RecyclerViewInterface {
 
     ArrayList<AminoAcidModel> aminoAcidModels = new ArrayList<>();
+    AA_RecyclerViewAdapter adapter;
     int[] aminoAcidImages = {R.drawable.ic_alanine, R.drawable.ic_arginine, R.drawable.ic_asparagine,
             R.drawable.ic_aspartic_acid, R.drawable.ic_cysteine, R.drawable.ic_pyrrolysine,
             R.drawable.ic_glutamine, R.drawable.ic_glutamic_acid, R.drawable.ic_glycine,
@@ -33,7 +34,7 @@ public class Aminozuren extends AppCompatActivity implements RecyclerViewInterfa
 
         setUpAminoAcidModels();
 
-        AA_RecyclerViewAdapter adapter = new AA_RecyclerViewAdapter(this, aminoAcidModels, this);
+        adapter = new AA_RecyclerViewAdapter(this, aminoAcidModels, this);
 
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -66,5 +67,11 @@ public class Aminozuren extends AppCompatActivity implements RecyclerViewInterfa
 
         startActivity(intent);
 
+    }
+
+    @Override
+    public void onItemLongClick(int position) {
+        aminoAcidModels.remove(position);
+        adapter.notifyItemRemoved(position);
     }
 }
