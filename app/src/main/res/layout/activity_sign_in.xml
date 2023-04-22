@@ -46,9 +46,17 @@
 
     <Button
         android:id="@+id/buttonLogIn"
+        :
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgrond
+        android:backgroundTint="@color/veiligthuis_blauw"
         android:text="@string/nav_logIn"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordSignIn" />"@drawable/button_veilig_thuis_homescreen.xml"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

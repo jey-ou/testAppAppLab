@@ -6,7 +6,7 @@
     android:id="@+id/veilig_thuis_toolbar"
     android:layout_width="match_parent"
     android:layout_height="72dp"
-    android:background="?attr/colorPrimary"
+    android:background="@color/white"
     android:elevation="4dp"
     android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
     tools:showIn="@layout/activity_main">
@@ -15,30 +15,30 @@
         android:id="@+id/image_view"
         android:layout_width="52dp"
         android:layout_height="52dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
         android:adjustViewBounds="true"
         android:maxWidth="56dp"
         android:maxHeight="56dp"
         android:scaleType="fitCenter"
-        android:layout_marginLeft="3dp"
-        android:layout_marginBottom="3dp"
-        android:layout_marginRight="3dp"
-        android:layout_marginTop="3dp"
         android:src="@drawable/veilig_thuis_logo234x" />
 
     <ImageView
         android:id="@+id/second_image_view"
         android:layout_width="52dp"
         android:layout_height="52dp"
+        android:layout_gravity="end"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="3dp"
         android:adjustViewBounds="true"
         android:maxWidth="56dp"
         android:maxHeight="56dp"
         android:scaleType="fitCenter"
-        android:layout_marginLeft="3dp"
-        android:layout_marginBottom="3dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="3dp"
-        android:src="@drawable/veiligthuis_gebruiker"
-        android:layout_gravity="end"/>
+        android:src="@drawable/veiligthuis_gebruiker" />
 
 
 </androidx.appcompat.widget.Toolbar>

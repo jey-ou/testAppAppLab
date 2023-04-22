@@ -9,4 +9,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blueBlack">#FF111f28</color>
     <color name="tanAccent">#FFE3CDB3</color>
+    <color name="veiligthuis_blauw">#0693E3</color>
+    <color name="veiligthuis_rood">#CF2E2E</color>
+    <color name="veiligthuis_paars">#CD6AFC</color>
+    <color name="veiligthuis_oranje">#CF7B2E</color>
+    <color name="veiligthuis_groen">#2BC57B</color>
+    <color name="veiligthuis_grijs">#D9D9D9</color>
+    <color name="lime">#4CD7D0</color>
 </resources>
