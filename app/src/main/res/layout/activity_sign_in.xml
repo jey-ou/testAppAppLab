@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".SignInOut.SignInActivity">
 
+    <include layout="@layout/toolbar" />
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="177dp"
@@ -48,7 +50,7 @@
         android:id="@+id/buttonLogIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/veiligthuis_blauw"
+        android:background="@drawable/button_veilig_thuis_homescreen"
         android:text="@string/nav_logIn"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"

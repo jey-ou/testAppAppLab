@@ -3,6 +3,8 @@ package com.example.testapp_applab.SignInOut;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.testapp_applab.Buttons.ButtonExampleActivity;
 import com.example.testapp_applab.R;
 import com.example.testapp_applab.Voorbeelden.Aminozuren;
 import com.google.firebase.auth.FirebaseAuth;
@@ -30,6 +32,8 @@ public class TestenActivity extends AppCompatActivity {
         myRef = database.getReference("message");
 
         Button btn_primair = (Button) findViewById(R.id.btn_primaireTest);
+        Button btnAminozuren = findViewById(R.id.btn_recyclerView);
+        Button btnOntwerpen = findViewById(R.id.button_ontwerpen);
         btn_primair.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,11 +41,17 @@ public class TestenActivity extends AppCompatActivity {
             }
         });
 
-        Button btnAminozuren = findViewById(R.id.btn_recyclerView);
+
         btnAminozuren.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 recycler();
+            }
+        });
+        btnOntwerpen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                buttonOntwerpen();
             }
         });
     }
@@ -55,6 +65,10 @@ public class TestenActivity extends AppCompatActivity {
         Intent intent = new Intent (getApplicationContext(), Aminozuren.class);
         startActivity(intent);
 
+    }
+    public void buttonOntwerpen(){
+        Intent intent = new Intent (getApplicationContext(), ButtonExampleActivity.class);
+        startActivity(intent);
     }
 }
 

@@ -12,7 +12,13 @@
         android:theme="@style/Theme.TestAppAppLab"
         tools:targetApi="31">
         <activity
-            android:name=".ButtonExampleActivity"
+            android:name=".JSONdemo.JsonDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LifeCycleDemo.LifeCyleDemo2"
+            android:exported="false" />
+        <activity
+            android:name=".Buttons.ButtonExampleActivity"
             android:exported="false" />
         <activity
             android:name=".Voorbeelden.Aminozuren2Activity"

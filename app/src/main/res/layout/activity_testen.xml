@@ -11,7 +11,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
         android:text="primaire test hello world"
+        android:textColor="@color/veiligthuis_grijs"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,8 +23,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
         android:text="Aminozuren"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/btn_primaireTest"
         app:layout_constraintStart_toStartOf="@+id/btn_primaireTest"
         app:layout_constraintTop_toBottomOf="@+id/btn_primaireTest" />
+
+    <Button
+        android:id="@+id/button_ontwerpen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/button_ontwerpen"
+        android:textAllCaps="false"
+        android:background="@drawable/square_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_recyclerView" />
 </androidx.constraintlayout.widget.ConstraintLayout>
