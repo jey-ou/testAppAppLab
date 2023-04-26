@@ -14,6 +14,7 @@
     <string name="molecule_name">naam</string>
     <string name="molecule_1Letter">A</string>
     <string name="molecule_3Letter">AUB</string>
+    <string name="button_ontwerpen">Buttons</string>
 
     <string-array name="amino_acids_full_text">
         <item>Alanine</item>
