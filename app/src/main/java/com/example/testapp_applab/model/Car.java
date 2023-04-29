@@ -1,18 +1,22 @@
 package com.example.testapp_applab.model;
 
+import androidx.annotation.NonNull;
+
 public class Car {
     private String make;
     private int year;
 
+    public Car(String make, int year) {
+        this.make = make;
+        this.year = year;
+    }
+
     public Car() {
     }
 
-    public Car(String carName, int carYear) {
-    }
-
-    public void setCar_name(String car_name, int car_year) {
-        this.make = car_name;
-        this.year = car_year;
+    public void setCar_name(String make, int year) {
+        this.make = make;
+        this.year = year;
     }
 
     public String getMake() {
@@ -31,6 +35,7 @@ public class Car {
         this.year = year;
     }
 
+    @NonNull
     @Override
     public String toString(){
         return "Car(" +

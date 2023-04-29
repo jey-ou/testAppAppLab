@@ -22,7 +22,7 @@
         android:id="@+id/btn_recyclerView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/button_veilig_thuis_homescreen"
         android:text="Aminozuren"
         android:textColor="@color/white"
@@ -34,11 +34,37 @@
         android:id="@+id/button_ontwerpen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/square_button"
         android:text="@string/button_ontwerpen"
         android:textAllCaps="false"
-        android:background="@drawable/square_button"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_recyclerView" />
+
+    <Button
+        android:id="@+id/JSONjackson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:text="JSON Jackson"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_ontwerpen" />
+
+    <Button
+        android:id="@+id/buttonLVAA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:text="Array ListView"
+        android:textColor="@color/veiligthuis_grijs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/JSONjackson" />
 </androidx.constraintlayout.widget.ConstraintLayout>

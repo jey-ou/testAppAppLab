@@ -4,7 +4,9 @@ package com.example.testapp_applab.SignInOut;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.testapp_applab.AdapterDemos.ListViewArrayAdapter;
 import com.example.testapp_applab.Buttons.ButtonExampleActivity;
+import com.example.testapp_applab.JSONdemo.JsonDemoActivity;
 import com.example.testapp_applab.R;
 import com.example.testapp_applab.Voorbeelden.Aminozuren;
 import com.google.firebase.auth.FirebaseAuth;
@@ -34,13 +36,14 @@ public class TestenActivity extends AppCompatActivity {
         Button btn_primair = (Button) findViewById(R.id.btn_primaireTest);
         Button btnAminozuren = findViewById(R.id.btn_recyclerView);
         Button btnOntwerpen = findViewById(R.id.button_ontwerpen);
+        Button btnJSON = findViewById(R.id.JSONjackson);
+        Button btnLVAA = findViewById(R.id.buttonLVAA);
         btn_primair.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 primaireTest();
             }
         });
-
 
         btnAminozuren.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +57,18 @@ public class TestenActivity extends AppCompatActivity {
                 buttonOntwerpen();
             }
         });
+
+        btnJSON.setOnClickListener((v)->{
+            Intent intent = new Intent (getApplicationContext(), JsonDemoActivity.class);
+            startActivity(intent);
+        });
+
+        btnLVAA.setOnClickListener((v) ->{
+            Intent intent = new Intent (getApplicationContext(), ListViewArrayAdapter.class);
+            startActivity(intent);
+        });
+
+
     }
 
     public void primaireTest(){

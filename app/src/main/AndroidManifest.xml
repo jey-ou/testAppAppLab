@@ -12,6 +12,12 @@
         android:theme="@style/Theme.TestAppAppLab"
         tools:targetApi="31">
         <activity
+            android:name=".JSONdemo.GsonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdapterDemos.ListViewArrayAdapter"
+            android:exported="false" />
+        <activity
             android:name=".JSONdemo.JsonDemoActivity"
             android:exported="false" />
         <activity
