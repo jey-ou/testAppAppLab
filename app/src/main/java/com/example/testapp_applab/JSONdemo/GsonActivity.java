@@ -10,8 +10,13 @@ import android.widget.TextView;
 
 import com.example.testapp_applab.R;
 import com.example.testapp_applab.SignInOut.TestenActivity;
+import com.example.testapp_applab.model.Adress;
 import com.example.testapp_applab.model.Employee;
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
 
 public class GsonActivity extends AppCompatActivity {
 
@@ -26,6 +31,7 @@ public class GsonActivity extends AppCompatActivity {
         Button btnTest2 = findViewById(R.id.buttonJSONTest2);
         Button btnTest3 = findViewById(R.id.buttonJSONTest3);
         Button btnHome = findViewById(R.id.buttonJsonHome);
+        Button btnTest4 = findViewById(R.id.buttonJSONTest4);
         TextView tvResultaat = findViewById(R.id.et_rs_testJSON2);
 
         btnTest1.setOnClickListener((view -> {
@@ -83,7 +89,7 @@ public class GsonActivity extends AppCompatActivity {
             body += "\nHet resultaat is:\n";
             body += body += employee.toString();
 
-            Log.i("Derde test Employee: ",  employee.toString());
+            Log.i("Derde test GSON: ",  employee.toString());
 
             String footer = "\n\nJe kan dit ook volgen in de Logcat van android";
             tvResultaat.setText(header + body + footer);
@@ -93,6 +99,22 @@ public class GsonActivity extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), TestenActivity.class);
             startActivity(intent);
         });
+
+        btnTest4.setOnClickListener((view -> {
+            String header = "JSON test 3\n\n";
+            String body = "Deze vierde test gebruikt twee objecten Employee en Adress. ";
+            body += "Employee neemt het object adres op in zijn class:\n\n";
+
+            Adress adress = new Adress("Germany", "Berlin");
+            Employee employee = new Employee("John", 30, "john@gmail.com", adress);
+            String json = gson.toJson(employee);
+            Log.i("Vierde test GSON: ",  employee.toString());
+
+            body += json;
+            body +="\n\n Deze omzetting verloopt eveneens feilloos";
+            String footer = "\n\nJe kan dit ook volgen in de Logcat van android";
+            tvResultaat.setText(body);
+        }));
         /* deel 1 van de test: creatie van een employee object file naar een json format
         Employee employee = new Employee("John", 30, "john@gmail.com");
         String json1 =gson.toJson(employee);
@@ -114,9 +136,32 @@ public class GsonActivity extends AppCompatActivity {
         Employee employee2 = gson.fromJson(json3, Employee.class);
         Log.i("Derde test Employee: ",  employee2.toString());
 
-         */
+        /* deel a1
+        Adress adress = new Adress("Germany", "Berlin");
+        Employee employee = new Employee("John", 30, "john@gmail.com", adress);
+        String json = gson.toJson(employee);
+        tvResultaat.setText(json);
+        */
 
-        //deel a1
+        //deel a2
+        String json = "{\"adress\":{\"city\": \"New York\",\"country\":\"USA\"},\"age\": 30,\"firstName\": \"John\",\"mail\": \"john@gmail.com\"}";
+        Employee employee = gson.fromJson(json, Employee.class);
+        Log.i("tweede reeks test GsonActivity:", "inhoud JSON string " + json);
+        tvResultaat.setText(employee.toString());
+
+
+
+        String dollarJson = "{ '1$': { 'amount': 1, 'currency': 'Dollar'}," +
+                "'2$': { 'amount': 2, 'currency': 'Dollar'}, " +
+                "'3€': { 'amount': 3, 'currency': 'Euro'} }";
+
+        //Gson gson = new Gson();
+
+        Type amountCurrencyType =
+                new TypeToken<HashMap<String, AmountWithCurrency>>(){}.getType();
+
+        HashMap<String, AmountWithCurrency> amountCurrency =
+                gson.fromJson(dollarJson, amountCurrencyType);
 
     }
 

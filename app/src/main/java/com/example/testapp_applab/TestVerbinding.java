@@ -30,7 +30,7 @@ public class TestVerbinding extends AppCompatActivity {
         myRef.setValue("Hello, World!");
 
         DatabaseReference test=database.getReference("test");
-        //TextView tvVerbinding = findViewById(R.id.testVerbinding);
+        TextView tvVerbinding = findViewById(R.id.testVerbinding);
 
         // Read from the database
         myRef.addValueEventListener(new ValueEventListener() {
@@ -40,6 +40,8 @@ public class TestVerbinding extends AppCompatActivity {
                 // whenever data at this location is updated.
                 String value = dataSnapshot.getValue(String.class);
                 Log.d(TAG, "Value is: " + value);
+
+                tvVerbinding.setText("Value is: " + value);
             }
 
             @Override
