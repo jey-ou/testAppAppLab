@@ -20,7 +20,7 @@
 
     <Button
         android:id="@+id/btn_recyclerView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@drawable/button_veilig_thuis_homescreen"
@@ -32,39 +32,62 @@
 
     <Button
         android:id="@+id/button_ontwerpen"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@drawable/square_button"
         android:text="@string/button_ontwerpen"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_recyclerView"
+        app:layout_constraintStart_toStartOf="@+id/btn_recyclerView"
         app:layout_constraintTop_toBottomOf="@+id/btn_recyclerView" />
 
     <Button
         android:id="@+id/JSONjackson"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@drawable/button_veilig_thuis_homescreen"
         android:text="JSON Jackson"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button_ontwerpen"
+        app:layout_constraintStart_toStartOf="@+id/button_ontwerpen"
         app:layout_constraintTop_toBottomOf="@+id/button_ontwerpen" />
 
     <Button
         android:id="@+id/buttonLVAA"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/button_veilig_thuis_homescreen"
         android:text="Array ListView"
         android:textColor="@color/veiligthuis_grijs"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/JSONjackson"
+        app:layout_constraintStart_toStartOf="@+id/JSONjackson"
         app:layout_constraintTop_toBottomOf="@+id/JSONjackson" />
+
+    <Button
+        android:id="@+id/buttonGson"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:text="Gson Demo"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/buttonLVAA"
+        app:layout_constraintStart_toStartOf="@+id/buttonLVAA"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLVAA" />
+
+    <Button
+        android:id="@+id/btnRecyclerView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:text="RecyclerView 2"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/buttonGson"
+        app:layout_constraintStart_toStartOf="@+id/buttonGson"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGson" />
 </androidx.constraintlayout.widget.ConstraintLayout>

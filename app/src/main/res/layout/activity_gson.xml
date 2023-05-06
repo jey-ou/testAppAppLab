@@ -2,8 +2,92 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/et_rs_testJSON"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".JSONdemo.GsonActivity">
+
+    <Button
+        android:id="@+id/buttonJSONTest1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="JSON test 1 "
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonJSONTest2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="JSON test 2"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/buttonJSONTest1"
+        app:layout_constraintStart_toStartOf="@+id/buttonJSONTest1"
+        app:layout_constraintTop_toBottomOf="@+id/buttonJSONTest1" />
+
+    <Button
+        android:id="@+id/buttonJSONTest3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="JSON test 3"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/buttonJSONTest2"
+        app:layout_constraintStart_toStartOf="@+id/buttonJSONTest2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonJSONTest2" />
+
+    <Button
+        android:id="@+id/buttonJsonHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="182dp"
+        android:text="Home"
+        app:layout_constraintEnd_toEndOf="@+id/buttonJSONTest3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/buttonJSONTest3"
+        app:layout_constraintTop_toBottomOf="@+id/buttonJSONTest4" />
+
+    <EditText
+        android:id="@+id/et_rs_testJSON2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonJSONTest1"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonJSONTest4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="JSON test 4"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/buttonJSONTest3"
+        app:layout_constraintStart_toStartOf="@+id/buttonJSONTest3"
+        app:layout_constraintTop_toBottomOf="@+id/buttonJSONTest3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

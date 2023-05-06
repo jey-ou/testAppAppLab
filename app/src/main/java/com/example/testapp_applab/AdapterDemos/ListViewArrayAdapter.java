@@ -56,7 +56,7 @@ public class ListViewArrayAdapter extends AppCompatActivity {
         lv_listofnames.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(getApplicationContext(), "pos: " + i +" naam: " + friends.get(i).toString(), 0).show();
+                Toast.makeText(getApplicationContext(), "pos: " + i +" naam: " + friends.get(i).toString(), Toast.LENGTH_SHORT).show();
             }
         });
     }

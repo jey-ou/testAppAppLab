@@ -2,6 +2,7 @@ package com.example.testapp_applab;
 
 import static android.content.ContentValues.TAG;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -29,16 +30,18 @@ public class TestVerbinding extends AppCompatActivity {
         myRef.setValue("Hello, World!");
 
         DatabaseReference test=database.getReference("test");
-        TextView testTestView = findViewById(R.id.testwaarde);
+        TextView tvVerbinding = findViewById(R.id.testVerbinding);
 
         // Read from the database
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
                 String value = dataSnapshot.getValue(String.class);
                 Log.d(TAG, "Value is: " + value);
+
+                tvVerbinding.setText("Value is: " + value);
             }
 
             @Override
