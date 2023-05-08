@@ -39,6 +39,7 @@ public class TestVerbinding extends AppCompatActivity {
                 // whenever data at this location is updated.
                 String value = dataSnapshot.getValue(String.class);
                 Log.d(TAG, "Value is: " + value);
+                Toast.makeText(getApplicationContext(),"hello world werd ingevoerd", Toast.LENGTH_SHORT);
             }
 
             @Override

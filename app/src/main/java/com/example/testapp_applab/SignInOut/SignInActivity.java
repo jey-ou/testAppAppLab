@@ -45,24 +45,29 @@ public class SignInActivity extends AppCompatActivity {
 
         Button btn = (Button) findViewById(R.id.buttonLogIn);
 
-
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
+        btn.setOnClickListener(view ->  {
                 signInButtonClicked();
-            }
         });
 
+        textViewForgotPassword.setOnClickListener(view->{
+            signInForgetPasswordClicked();
+        });
+
+        textViewRegister.setOnClickListener(view->{
+            signInRegisterClicked();
+        });
     }
 
     public void signInForgetPasswordClicked(){
-        Toast.makeText(SignInActivity.this,"nog niet geactiveerd",Toast.LENGTH_SHORT).show();
+        //Toast.makeText(SignInActivity.this,"nog niet geactiveerd",Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getApplicationContext(), ForgottenPasswordActivity.class);
+        startActivity(intent);
     }
 
     public void signInRegisterClicked(){
-        Toast.makeText(SignInActivity.this,"nog niet geactiveerd",Toast.LENGTH_SHORT).show();
+        //Toast.makeText(SignInActivity.this,"nog niet geactiveerd",Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
+        startActivity(intent);
     }
 
     public void signInButtonClicked(){

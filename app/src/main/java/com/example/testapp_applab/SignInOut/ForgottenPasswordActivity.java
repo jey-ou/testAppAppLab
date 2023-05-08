@@ -3,6 +3,7 @@ package com.example.testapp_applab.SignInOut;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.widget.Button;
@@ -28,13 +29,17 @@ public class ForgottenPasswordActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         editTextUserName = findViewById(R.id.editTextUserNameFP);
 
+        Button btn = findViewById(R.id.btn_resetPW);
+        btn.setOnClickListener(view->{
+            resetPassword();
+        });
     }
 
     public void resetPassword(){
         String txtEmail = editTextUserName.getText().toString().trim();
 
         if(!Patterns.EMAIL_ADDRESS.matcher(txtEmail).matches()){
-            editTextUserName.setError("Please enter valis email address");
+            editTextUserName.setError("Please enter valid email address");
             editTextUserName.requestFocus();
             return;
         }
@@ -44,7 +49,8 @@ public class ForgottenPasswordActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(getApplicationContext(), "Please Check your email address to reset your email address", Toast.LENGTH_SHORT).show();
-
+                            Intent intent = new Intent(getApplicationContext(), SignInActivity.class);
+                            startActivity(intent);
                         }else{
                             Toast.makeText(getApplicationContext(), "failed to reset the password", Toast.LENGTH_SHORT).show();
                         }
