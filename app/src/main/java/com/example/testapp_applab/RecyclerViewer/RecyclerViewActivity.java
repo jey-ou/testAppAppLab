@@ -56,8 +56,8 @@ public class RecyclerViewActivity extends AppCompatActivity {
         String password = edtTxtEmail.getText().toString();
         String id = databaseUsers.push().getKey();
 
-        User user = new User(username, useremail, userage, password, "");
-        databaseUsers.child("Users").child(id).setValue(user)
+        UserRecycler user = new UserRecycler(username, useremail, userage);
+        databaseUsers.child("usersRecycler").child(id).setValue(user)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {

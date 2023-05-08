@@ -10,32 +10,19 @@ public class User {
     private String phoneNo;
     private String email;
 
-    private String age;
-
     private String authorisatie;
 
     public User(){
 
     }
 
-    public User(String userName, String  email, String age,String userPassword, String phoneNo){
+    public User(String userName, String  email, String userPassword, String phoneNo){
         this.userName = userName;
         this.userPassword = userPassword;
         this.phoneNo = phoneNo;
         this.email = email;
         this.authorisatie = "Geen";
-        this.age = age;
     }
-    public User(String userName, String userPassword, String phoneNo, String email){
-
-        this.userName = userName;
-        this.userPassword = userPassword;
-        this.phoneNo = phoneNo;
-        this.email = email;
-        this.authorisatie = "Geen";
-        this.age = "";
-    }
-
 
 
     public String getUserName() {
