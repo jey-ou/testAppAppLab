@@ -10,6 +10,7 @@ import com.example.testapp_applab.JSONdemo.GsonActivity;
 import com.example.testapp_applab.JSONdemo.JsonDemoActivity;
 import com.example.testapp_applab.R;
 import com.example.testapp_applab.RecyclerViewer.RecyclerViewActivity;
+import com.example.testapp_applab.TestVerbinding;
 import com.example.testapp_applab.Voorbeelden.Aminozuren;
 import com.example.testapp_applab.Voorbeelden.RecyclerViewAminozurenActivity;
 import com.google.firebase.auth.FirebaseAuth;
@@ -48,7 +49,9 @@ public class TestenActivity extends AppCompatActivity {
         btn_primair.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                primaireTest();
+
+                Intent intent = new Intent(getApplicationContext(), TestVerbinding.class);
+                startActivity(intent);
             }
         });
 
@@ -88,11 +91,6 @@ public class TestenActivity extends AppCompatActivity {
 
     }
 
-    public void primaireTest(){
-
-
-        myRef.setValue("Hello world");
-    }
     public void recycler(){
         Intent intent = new Intent (getApplicationContext(), Aminozuren.class);
         startActivity(intent);
