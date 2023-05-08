@@ -1,0 +1,9 @@
+{
+  "adress": {
+    "city": "Berlin",
+    "country": "Germany"
+  },
+  "age": 30,
+  "firstName": "John",
+  "mail": "john@gmail.com"
+}

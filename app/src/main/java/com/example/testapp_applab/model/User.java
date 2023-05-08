@@ -1,7 +1,10 @@
 package com.example.testapp_applab.model;
 
-public class User {
 
+import com.google.firebase.database.IgnoreExtraProperties;
+
+@IgnoreExtraProperties
+public class User {
     private String userName;
     private String userPassword;
     private String phoneNo;
@@ -13,15 +16,14 @@ public class User {
 
     }
 
-    public User(String userName, String userPassword, String phoneNo, String email){
-
+    public User(String userName, String  email, String userPassword, String phoneNo){
         this.userName = userName;
         this.userPassword = userPassword;
         this.phoneNo = phoneNo;
         this.email = email;
         this.authorisatie = "Geen";
-
     }
+
 
     public String getUserName() {
         return userName;
