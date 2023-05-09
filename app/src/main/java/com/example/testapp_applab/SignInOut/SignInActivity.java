@@ -92,11 +92,10 @@ public class SignInActivity extends AppCompatActivity {
                     Toast.makeText(SignInActivity.this,"Successfully login",Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getApplicationContext(), AfterSignInActivity.class);
                     startActivity(intent);
-                    //finish();
+
                 } else{
                     Toast.makeText(SignInActivity.this,"failed login",Toast.LENGTH_SHORT).show();
-                    //editTextUserName.setText("");
-                    //editTextPassword.setText("");
+
                 }
             }
         });
