@@ -14,6 +14,7 @@ import com.example.testapp_applab.Voorbeelden.Aminozuren;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class AfterSignInActivity extends AppCompatActivity {
 
@@ -27,6 +28,20 @@ public class AfterSignInActivity extends AppCompatActivity {
         //Intent intent = new Intent(this, Aminozuren.class);
         //startActivity(intent);
     }
+    /*
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+            //currentUser.reload();
+           //;
+        }else {
+            Intent intent = new Intent(getApplicationContext(),SignUpActivity.class);
+            startActivity(intent);
+        }
 
+    }
+*/
 
 }
