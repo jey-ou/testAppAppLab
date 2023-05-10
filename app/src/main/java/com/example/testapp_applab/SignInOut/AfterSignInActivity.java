@@ -25,23 +25,25 @@ public class AfterSignInActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_after_sign_in);
+
+        mAuth = FirebaseAuth.getInstance();
         //Intent intent = new Intent(this, Aminozuren.class);
         //startActivity(intent);
     }
-    /*
+
     @Override
     protected void onStart() {
         super.onStart();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if(currentUser != null){
-            //currentUser.reload();
+            //There is some one logged in
            //;
         }else {
-            Intent intent = new Intent(getApplicationContext(),SignUpActivity.class);
+            Intent intent = new Intent(getApplicationContext(),SignInActivity.class);
             startActivity(intent);
+            finish();
         }
 
     }
-*/
 
 }

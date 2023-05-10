@@ -23,8 +23,6 @@ public class RecyclerViewActivity extends AppCompatActivity {
     Button btnInsert, btnView;
     EditText edtTxtName,edtTxtEmail, edtTxtAge,edtTxtPw;
     DatabaseReference databaseUsers;
-    //RecyclerView recView;
-    //myadapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +39,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         databaseUsers = FirebaseDatabase.getInstance().getReference();
 
         btnInsert.setOnClickListener(view ->{
-            InsertData();
+            insertData();
         });
 
         btnView.setOnClickListener(view ->{
@@ -49,7 +47,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         });
     }
 
-    private void InsertData() {
+    private void insertData() {
         String username = edtTxtName.getText().toString();
         String useremail =edtTxtEmail.getText().toString();
         String userage = edtTxtAge.getText().toString();
