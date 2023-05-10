@@ -30,6 +30,7 @@ public class AfterSignInActivity extends AppCompatActivity {
         //Intent intent = new Intent(this, Aminozuren.class);
         //startActivity(intent);
     }
+    
 
     @Override
     protected void onStart() {
@@ -45,5 +46,7 @@ public class AfterSignInActivity extends AppCompatActivity {
         }
 
     }
+
+
 
 }
