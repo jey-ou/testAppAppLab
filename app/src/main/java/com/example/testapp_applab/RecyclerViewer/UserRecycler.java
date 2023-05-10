@@ -14,7 +14,7 @@ public class UserRecycler {
         this.age = age;
     }
 
-    public String getUserName() {
+    public String getName() {
         return userName;
     }
 
