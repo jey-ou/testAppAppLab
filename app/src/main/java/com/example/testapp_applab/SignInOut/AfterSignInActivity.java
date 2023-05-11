@@ -44,9 +44,5 @@ public class AfterSignInActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         }
-
     }
-
-
-
 }
