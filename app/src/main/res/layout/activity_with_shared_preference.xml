@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Voorbeelden.WithSharedPreferenceActivity">
+
+    <EditText
+        android:id="@+id/edtNameFBA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/logIn_name"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtEmailFBA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/login_email"
+        android:inputType="text|textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/edtNameFBA"
+        app:layout_constraintStart_toStartOf="@+id/edtNameFBA"
+        app:layout_constraintTop_toBottomOf="@+id/edtNameFBA" />
+
+    <EditText
+        android:id="@+id/edtPasswordFBA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/logIn_password"
+        android:inputType="text|textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/edtEmailFBA"
+        app:layout_constraintStart_toStartOf="@+id/edtEmailFBA"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmailFBA" />
+
+    <Button
+        android:id="@+id/btnSaveFBA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:text="Sign in or register"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/edtPasswordFBA"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtPasswordFBA"
+        app:layout_constraintTop_toBottomOf="@+id/edtPasswordFBA" />
+
+    <Button
+        android:id="@+id/btnSkipLogIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:text="Skip log in"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnSaveFBA"
+        app:layout_constraintStart_toStartOf="@+id/btnSaveFBA"
+        app:layout_constraintTop_toBottomOf="@+id/btnSaveFBA" />
+
+    <EditText
+        android:id="@+id/edtNaamSF"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/logIn_name"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/btnSaveSF"
+        app:layout_constraintStart_toStartOf="@+id/btnSaveSF"
+        app:layout_constraintTop_toBottomOf="@+id/btnSaveSF" />
+
+    <EditText
+        android:id="@+id/edtAgeSF"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Geef leeftijd"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/edtNaamSF"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/edtNaamSF"
+        app:layout_constraintTop_toBottomOf="@+id/edtNaamSF" />
+
+    <EditText
+        android:id="@+id/edtInfoSF"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/info"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/edtAgeSF"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/edtAgeSF"
+        app:layout_constraintTop_toBottomOf="@+id/edtAgeSF" />
+
+    <Button
+        android:id="@+id/btnReadSF"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="163dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:padding="8sp"
+        android:text="Read from Pref"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/btnDeleteSF"
+        app:layout_constraintStart_toStartOf="@+id/edtInfoSF"
+        app:layout_constraintTop_toBottomOf="@+id/edtInfoSF" />
+
+    <Button
+        android:id="@+id/btnSaveSF"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:padding="8sp"
+        android:text="save to pref"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/btnSkipLogIn"
+        app:layout_constraintStart_toStartOf="@+id/btnSkipLogIn"
+        app:layout_constraintTop_toBottomOf="@+id/btnSkipLogIn" />
+
+    <Button
+        android:id="@+id/btnDeleteSF"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:padding="8sp"
+        android:text="Delete pref"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/edtInfoSF"
+        app:layout_constraintTop_toBottomOf="@+id/edtInfoSF" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
