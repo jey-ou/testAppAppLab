@@ -6,17 +6,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.testapp_applab.AdapterDemos.ListViewArrayAdapter;
 import com.example.testapp_applab.Buttons.ButtonExampleActivity;
+import com.example.testapp_applab.CallBackActivity;
 import com.example.testapp_applab.JSONdemo.GsonActivity;
 import com.example.testapp_applab.JSONdemo.JsonDemoActivity;
 import com.example.testapp_applab.R;
 import com.example.testapp_applab.RecyclerViewer.RecyclerViewActivity;
 import com.example.testapp_applab.TestVerbinding;
 import com.example.testapp_applab.Voorbeelden.Aminozuren;
-import com.example.testapp_applab.Voorbeelden.RecyclerViewAminozurenActivity;
+import com.example.testapp_applab.Voorbeelden.WithSharedPreferenceActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.gson.Gson;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -45,6 +45,8 @@ public class TestenActivity extends AppCompatActivity {
         Button btnLVAA = findViewById(R.id.buttonLVAA);
         Button btnGSON = findViewById(R.id.buttonGson);
         Button btnRecyclerView= findViewById(R.id.btnRecyclerView2);
+        Button btnActivity = findViewById(R.id.btnActCy2);
+        Button btnSharedPreference = findViewById(R.id.btn_test_sf);
 
         btn_primair.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,6 +90,15 @@ public class TestenActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        btnActivity.setOnClickListener((v)->{
+            Intent intent = new Intent (getApplicationContext(), CallBackActivity.class);
+            startActivity(intent);
+        });
+
+        btnSharedPreference.setOnClickListener(v ->{
+            Intent intent = new Intent (getApplicationContext(), WithSharedPreferenceActivity.class);
+            startActivity(intent);
+        });
 
     }
 

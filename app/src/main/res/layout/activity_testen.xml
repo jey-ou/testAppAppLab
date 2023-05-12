@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:background="@drawable/button_veilig_thuis_homescreen"
+        android:padding="8dp"
         android:text="primaire test hello world"
         android:textColor="@color/veiligthuis_grijs"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,4 +91,30 @@
         app:layout_constraintEnd_toEndOf="@+id/buttonGson"
         app:layout_constraintStart_toStartOf="@+id/buttonGson"
         app:layout_constraintTop_toBottomOf="@+id/buttonGson" />
+
+    <Button
+        android:id="@+id/btnActCy2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:text="Act cyclus"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnRecyclerView2"
+        app:layout_constraintStart_toStartOf="@+id/btnRecyclerView2"
+        app:layout_constraintTop_toBottomOf="@+id/btnRecyclerView2" />
+
+    <Button
+        android:id="@+id/btn_test_sf"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:text="SharedPreferences"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnActCy2"
+        app:layout_constraintStart_toStartOf="@+id/btnActCy2"
+        app:layout_constraintTop_toBottomOf="@+id/btnActCy2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
