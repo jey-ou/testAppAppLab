@@ -42,7 +42,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="267dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Email: "
@@ -61,12 +61,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
+                android:text="Info: "
                 android:textSize="24sp"
-                android:text="Age: " />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/crdv_age"
