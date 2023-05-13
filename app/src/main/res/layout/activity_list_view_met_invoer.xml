@@ -6,4 +6,92 @@
     android:layout_height="match_parent"
     tools:context=".ListViewLocalJson.ListViewMetInvoerActivity">
 
+
+    <TextView
+        android:id="@+id/txtVwGSONheader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:padding="6dp"
+        android:text="GSON demo shared preferences"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewGSON"
+        android:layout_width="408dp"
+        android:layout_height="407dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextGSONnaamSF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtVwGSONheader"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editTextGSONnaamSF"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="12dp"
+        android:ems="10"
+        android:hint="@string/logIn_name"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@+id/btn_InsertSFGSON"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="460dp" />
+
+    <EditText
+        android:id="@+id/editTextGSONemailSF"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/login_email"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/editTextGSONnaamSF"
+        app:layout_constraintStart_toStartOf="@+id/editTextGSONnaamSF"
+        app:layout_constraintTop_toBottomOf="@+id/editTextGSONnaamSF" />
+
+    <EditText
+        android:id="@+id/editTextGSONinfoSF"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/info"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/editTextGSONemailSF"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextGSONemailSF"
+        app:layout_constraintTop_toBottomOf="@+id/editTextGSONemailSF" />
+
+    <Button
+        android:id="@+id/btn_InsertSFGSON"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:text="Insert"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewGSON" />
+
+    <Button
+        android:id="@+id/btn_saveSFGSON"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:text="Save"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/btn_InsertSFGSON"
+        app:layout_constraintStart_toStartOf="@+id/btn_InsertSFGSON"
+        app:layout_constraintTop_toBottomOf="@+id/btn_InsertSFGSON" />
 </androidx.constraintlayout.widget.ConstraintLayout>
