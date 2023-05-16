@@ -108,7 +108,7 @@ public class GsonActivity extends AppCompatActivity {
             Adress adress = new Adress("Germany", "Berlin");
             Employee employee = new Employee("John", 30, "john@gmail.com", adress);
             String json = gson.toJson(employee);
-            Log.i("Vierde test GSON: ",  employee.toString());
+            Log.i("SharedPrefsJSON",  employee.toString());
 
             body += json;
             body +="\n\n Deze omzetting verloopt eveneens feilloos";

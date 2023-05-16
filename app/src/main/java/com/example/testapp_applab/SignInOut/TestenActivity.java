@@ -9,6 +9,7 @@ import com.example.testapp_applab.Buttons.ButtonExampleActivity;
 import com.example.testapp_applab.CallBackActivity;
 import com.example.testapp_applab.JSONdemo.GsonActivity;
 import com.example.testapp_applab.JSONdemo.JsonDemoActivity;
+import com.example.testapp_applab.ListViewLocalJson.ListViewMetInvoerActivity;
 import com.example.testapp_applab.R;
 import com.example.testapp_applab.RecyclerViewer.RecyclerViewActivity;
 import com.example.testapp_applab.TestVerbinding;
@@ -47,6 +48,7 @@ public class TestenActivity extends AppCompatActivity {
         Button btnRecyclerView= findViewById(R.id.btnRecyclerView2);
         Button btnActivity = findViewById(R.id.btnActCy2);
         Button btnSharedPreference = findViewById(R.id.btn_test_sf);
+        Button btnShrdPrefListView = findViewById(R.id.SharedPrefListV);
 
         btn_primair.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,6 +99,11 @@ public class TestenActivity extends AppCompatActivity {
 
         btnSharedPreference.setOnClickListener(v ->{
             Intent intent = new Intent (getApplicationContext(), WithSharedPreferenceActivity.class);
+            startActivity(intent);
+        });
+
+        btnShrdPrefListView.setOnClickListener(v->{
+            Intent intent = new Intent (getApplicationContext(), ListViewMetInvoerActivity.class);
             startActivity(intent);
         });
 
