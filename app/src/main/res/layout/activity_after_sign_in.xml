@@ -17,12 +17,104 @@
         app:srcCompat="@drawable/veilig_thuis_logo234x" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewHeaderAfter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Correct ingeloged en klaar om verder te gaan"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
+        android:text="Klassieke benadering data"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/textViewUserNameAfter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeaderAfter" />
+
+    <TextView
+        android:id="@+id/textViewUserEmailAfter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/textViewUserNameAfter"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewUserNameAfter"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUserNameAfter" />
+
+    <TextView
+        android:id="@+id/textViewUserInfoAfter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/textViewUserEmailAfter"
+        app:layout_constraintStart_toStartOf="@+id/textViewUserEmailAfter"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUserEmailAfter" />
+
+    <Button
+        android:id="@+id/buttonGaVerderAfter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="Ga naar submenu"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/headerGSONsectie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Model benadering"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUserInfoAfter" />
+
+    <TextView
+        android:id="@+id/tvSecModelNaam"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerGSONsectie" />
+
+    <TextView
+        android:id="@+id/tvSecJModelEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/tvSecModelNaam"
+        app:layout_constraintStart_toStartOf="@+id/tvSecModelNaam"
+        app:layout_constraintTop_toBottomOf="@+id/tvSecModelNaam" />
+
+    <TextView
+        android:id="@+id/tvSecModelInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/tvSecJModelEmail"
+        app:layout_constraintStart_toStartOf="@+id/tvSecJModelEmail"
+        app:layout_constraintTop_toBottomOf="@+id/tvSecJModelEmail" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
