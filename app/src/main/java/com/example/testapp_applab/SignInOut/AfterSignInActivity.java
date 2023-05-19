@@ -30,6 +30,8 @@ public class AfterSignInActivity extends AppCompatActivity {
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
+        TextView userName0 = findViewById(R.id.tvSecUserIDtoken);
+        TextView userEmail0 = findViewById(R.id.tvSecUserIDemail);
         TextView userName = findViewById(R.id.textViewUserNameAfter);
         TextView userEmail =findViewById(R.id.textViewUserEmailAfter);
         TextView userInfo = findViewById(R.id.textViewUserInfoAfter);
@@ -48,6 +50,11 @@ public class AfterSignInActivity extends AppCompatActivity {
 
         if (user !=null) {
             String userId = user.getUid();
+            FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+            String email0 = currentUser.getEmail();
+
+
+
             //DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child(userId);
             Log.i("SharedPrefsJSON", "userId niet leeg na login");
             //header.setText(userId); // te verwijderen
@@ -61,6 +68,10 @@ public class AfterSignInActivity extends AppCompatActivity {
                         if (task.getResult().exists()){
 
                             Toast.makeText(getApplicationContext(),"Successfully Read",Toast.LENGTH_SHORT).show();
+                            // Data afleidbaar uit userID
+
+                            userName0.setText(userId);
+                            userEmail0.setText(email0);
 
                             DataSnapshot dataSnapshot = task.getResult();
                             String firstName = String.valueOf(dataSnapshot.child("userName").getValue());

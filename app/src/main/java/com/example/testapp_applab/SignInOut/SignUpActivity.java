@@ -41,7 +41,7 @@ public class SignUpActivity extends AppCompatActivity {
         editTextPhoneNo =(EditText) findViewById(R.id.editTextMobileNo);
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
 
-        Button button = (Button) findViewById(R.id.buttonAfterInput);
+        Button button = (Button) findViewById(R.id.buttonRegister);
         Button btn_testen = (Button) findViewById(R.id.btn_testen) ; //
         btn_testen.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +59,7 @@ public class SignUpActivity extends AppCompatActivity {
                 String txtPassword = editTextPassword.getText().toString().trim();
                 String txtPhoneNo = editTextPhoneNo.getText().toString().trim();
                 String txtEmail = editTextEmail.getText().toString().trim();
+
                 mAuth = FirebaseAuth.getInstance();
 
                 if(txtUserName.isEmpty()){
