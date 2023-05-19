@@ -23,29 +23,27 @@ import java.util.regex.Pattern;
 public class SignInActivity extends AppCompatActivity {
     EditText editTextUserName;
     EditText editTextPassword;
-
     TextView textViewForgotPassword;
     TextView textViewRegister;
     Button btnSignIn;
     FirebaseAuth mAuth;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
-        editTextUserName = (EditText) findViewById(R.id.editTextEmailSignIn);
-        editTextPassword = (EditText) findViewById(R.id.editTextPasswordSignIn);
+        editTextUserName = findViewById(R.id.editTextEmailSignIn);
+        editTextPassword = findViewById(R.id.editTextPasswordSignIn);
 
-        textViewForgotPassword = (TextView) findViewById(R.id.textViewForgetPassword);
-        textViewRegister = (TextView) findViewById(R.id.textViewRegister);
+        textViewForgotPassword = findViewById(R.id.textViewForgetPassword);
+        textViewRegister = findViewById(R.id.textViewRegister);
 
         mAuth = FirebaseAuth.getInstance();
 
-        Button btn = (Button) findViewById(R.id.buttonLogIn);
+        btnSignIn = findViewById(R.id.buttonLogIn);
 
-        btn.setOnClickListener(view ->  {
+        btnSignIn.setOnClickListener(view ->  {
                 signInButtonClicked();
         });
 
@@ -84,7 +82,6 @@ public class SignInActivity extends AppCompatActivity {
             editTextPassword.setError("Please enter password at least 7 charakters");
             editTextPassword.requestFocus();
         }
-
         mAuth.signInWithEmailAndPassword(userName, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -95,12 +92,8 @@ public class SignInActivity extends AppCompatActivity {
 
                 } else{
                     Toast.makeText(SignInActivity.this,"failed login",Toast.LENGTH_SHORT).show();
-
                 }
             }
         });
-
-
     }
-
 }
