@@ -50,14 +50,10 @@ public class AfterSignInActivity extends AppCompatActivity {
 
         if (user !=null) {
             String userId = user.getUid();
-            FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
-            String email0 = currentUser.getEmail();
-
-
+            String email0 = user.getEmail();
 
             //DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child(userId);
-            Log.i("SharedPrefsJSON", "userId niet leeg na login");
-            //header.setText(userId); // te verwijderen
+            Log.i("SharedPrefsJSON", "userId na login");
 
             DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
 
@@ -67,7 +63,7 @@ public class AfterSignInActivity extends AppCompatActivity {
                     if (task.isSuccessful()){
                         if (task.getResult().exists()){
 
-                            Toast.makeText(getApplicationContext(),"Successfully Read",Toast.LENGTH_SHORT).show();
+                            Log.i("SharedPrefsJSON", "Sucessvol read op userid in realtime database");
                             // Data afleidbaar uit userID
 
                             userName0.setText(userId);
@@ -88,9 +84,7 @@ public class AfterSignInActivity extends AppCompatActivity {
                         }else {
 
                             Toast.makeText(getApplicationContext(),"User doesn't Exist",Toast.LENGTH_SHORT).show();
-
                         }
-
                     }
                 }
             });
@@ -98,20 +92,17 @@ public class AfterSignInActivity extends AppCompatActivity {
         }else{
             Toast.makeText(getApplicationContext(), "no userID", Toast.LENGTH_SHORT).show();
         }
-
-
     }
 
     @Override
     protected void onStart() {
         super.onStart();
 
-        //FirebaseAuth mAuth = null;
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         if(currentUser != null){
-            Toast.makeText(getApplicationContext(), "succesvol ingelogd", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), "succesvol ingelogd", Toast.LENGTH_SHORT).show();
             Log.i("SharedPrefsJSON", "onStart() correct uitgevoerd na login");
-           //;
+
         }else {
             Intent intent = new Intent(getApplicationContext(),SignInActivity.class);
             startActivity(intent);
