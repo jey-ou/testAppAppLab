@@ -16,6 +16,8 @@
     <string name="molecule_3Letter">AUB</string>
     <string name="button_ontwerpen">Buttons</string>
     <string name="info">Plaats hier uw informatie</string>
+    <string name="btn_listview_ui_normaal">listview normaal</string>
+    <string name="btn_tip_menu">Tips menu</string>
 
     <string-array name="amino_acids_full_text">
         <item>Alanine</item>

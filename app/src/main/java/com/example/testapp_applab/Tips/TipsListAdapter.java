@@ -26,6 +26,7 @@ public class TipsListAdapter extends FirebaseRecyclerAdapter<TipsListModel, Tips
 
     @Override
     protected void onBindViewHolder(@NonNull myViewHolder holder, int position, @NonNull TipsListModel model) {
+        // de holder de views parameters opgegeven in myViewHolder!
         holder.tvTipsListTitel.setText(model.getTitel());
         holder.tvTipsListBeschrijving.setText(model.getBeschrijving());
         holder.tvTipsListCategorie.setText(model.getCategorie());
@@ -51,6 +52,10 @@ public class TipsListAdapter extends FirebaseRecyclerAdapter<TipsListModel, Tips
         TextView tvTipsListTitel, tvTipsListBeschrijving, tvTipsListCategorie;
         public myViewHolder(@NonNull View itemView){
             super(itemView);
+
+            tvTipsListTitel= itemView.findViewById(R.id.tv_tip_item_titel); // tips_list_item.xml
+            tvTipsListBeschrijving= itemView.findViewById(R.id.tv_tip_item_beschrijving);
+            tvTipsListCategorie = itemView.findViewById(R.id.tv_tip_item_categorie);
         }
 
 

@@ -130,4 +130,17 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/btn_test_sf"
         app:layout_constraintTop_toBottomOf="@+id/btn_test_sf" />
+
+    <Button
+        android:id="@+id/btn_TipsMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:text="@string/btn_tip_menu"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/SharedPrefListV"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/SharedPrefListV"
+        app:layout_constraintTop_toBottomOf="@+id/SharedPrefListV" />
 </androidx.constraintlayout.widget.ConstraintLayout>
