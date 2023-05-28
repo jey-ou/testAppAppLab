@@ -13,6 +13,7 @@ import com.example.testapp_applab.ListViewLocalJson.ListViewMetInvoerActivity;
 import com.example.testapp_applab.R;
 import com.example.testapp_applab.RecyclerViewer.RecyclerViewActivity;
 import com.example.testapp_applab.TestVerbinding;
+import com.example.testapp_applab.Tips.TipsMenuActivity;
 import com.example.testapp_applab.Voorbeelden.Aminozuren;
 import com.example.testapp_applab.Voorbeelden.WithSharedPreferenceActivity;
 import com.google.firebase.auth.FirebaseAuth;
@@ -49,6 +50,7 @@ public class TestenActivity extends AppCompatActivity {
         Button btnActivity = findViewById(R.id.btnActCy2);
         Button btnSharedPreference = findViewById(R.id.btn_test_sf);
         Button btnShrdPrefListView = findViewById(R.id.SharedPrefListV);
+        Button btnTipsMenu = findViewById(R.id.btn_TipsMenu);
 
         btn_primair.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,6 +107,10 @@ public class TestenActivity extends AppCompatActivity {
         btnShrdPrefListView.setOnClickListener(v->{
             Intent intent = new Intent (getApplicationContext(), ListViewMetInvoerActivity.class);
             startActivity(intent);
+        });
+
+        btnTipsMenu.setOnClickListener(view ->{
+            startActivity(new Intent(getApplicationContext(), TipsMenuActivity.class));
         });
 
     }
