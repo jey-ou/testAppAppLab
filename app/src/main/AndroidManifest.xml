@@ -15,7 +15,7 @@
             android:name=".Tips.TipsListActivity"
             android:exported="false" />
         <activity
-            android:name=".Tips.tipsSearchActivity"
+            android:name=".Tips.TipsSearchActivity"
             android:exported="false" />
         <activity
             android:name=".CRUD_firebase.AlgmLijstPersActivity"
