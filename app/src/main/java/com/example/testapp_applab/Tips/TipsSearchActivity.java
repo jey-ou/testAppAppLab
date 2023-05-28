@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.example.testapp_applab.R;
 
-public class tipsSearchActivity extends AppCompatActivity {
+public class TipsSearchActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
