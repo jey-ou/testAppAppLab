@@ -12,6 +12,9 @@
         android:theme="@style/Theme.TestAppAppLab"
         tools:targetApi="31">
         <activity
+            android:name=".Tips.TipsListActivity"
+            android:exported="false" />
+        <activity
             android:name=".Tips.tipsSearchActivity"
             android:exported="false" />
         <activity
