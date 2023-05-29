@@ -18,6 +18,14 @@
     <string name="info">Plaats hier uw informatie</string>
     <string name="btn_listview_ui_normaal">listview normaal</string>
     <string name="btn_tip_menu">Tips menu</string>
+    <string name="tip_upload_beschrijving">Beschrijving</string>
+    <string name="tip_upload_titel">titel</string>
+    <string name="btn_tips_loadup_save">Save Tip</string>
+    <string name="btn_tips_loadup_clear"></string>
+    <string name="tv_tip_load_new_header">Maak een nieuwe tip aan</string>
+    <string name="btn_tips_upload_clear">wis formulier</string>
+    <string name="btn_tip_menu_upload">create new tip</string>
+    <string name="TipCatSpinner">categorie</string>
 
     <string-array name="amino_acids_full_text">
         <item>Alanine</item>

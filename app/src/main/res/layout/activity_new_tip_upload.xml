@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".Tips.NewTipUploadActivity">
+    <include
+        android:id="@+id/include3"
+        layout="@layout/toolbar"/>
+
+    <TextView
+        android:id="@+id/tvTipUpLoadHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        android:text="@string/tv_tip_load_new_header"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include3" />
+
+    <Spinner
+        android:id="@+id/spinner_tip_upload_categorie"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvTipUpLoadHeader"
+        app:layout_constraintStart_toStartOf="@+id/tvTipUpLoadHeader"
+        app:layout_constraintTop_toBottomOf="@+id/tvTipUpLoadHeader" />
+
+    <EditText
+        android:id="@+id/et_tips_Upload_titel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/tip_upload_titel"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/tvTipUpLoadHeader"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvTipUpLoadHeader"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_tip_upload_categorie" />
+
+    <EditText
+        android:id="@+id/et_tip_upload_beschrijving"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/tip_upload_beschrijving"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/btn_tips_upload_clear"
+        app:layout_constraintEnd_toEndOf="@+id/et_tips_Upload_titel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/et_tips_Upload_titel"
+        app:layout_constraintTop_toBottomOf="@+id/et_tips_Upload_titel" />
+
+    <Button
+        android:id="@+id/btn_tip_upload_save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:text="@string/btn_tips_loadup_save"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_tips_upload_clear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:text="@string/btn_tips_upload_clear"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btn_tip_upload_save"
+        app:layout_constraintEnd_toEndOf="@+id/btn_tip_upload_save"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
