@@ -10,7 +10,7 @@ import com.example.testapp_applab.R;
 
 public class TipsMenuActivity extends AppCompatActivity {
 
-    Button btnListView_ui;
+    Button btnListView_ui, button_loadup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,10 @@ public class TipsMenuActivity extends AppCompatActivity {
         btnListView_ui = findViewById(R.id.btn_listview_ui_normal);
         btnListView_ui.setOnClickListener(view ->{
             startActivity(new Intent(getApplicationContext(),TipsListActivity.class));
+        });
+        button_loadup = findViewById(R.id.btn_tips_upload);
+        button_loadup.setOnClickListener(view ->{
+            startActivity(new Intent(getApplicationContext(),NewTipUploadActivity.class));
         });
     }
 }
