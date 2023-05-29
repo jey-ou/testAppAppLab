@@ -50,8 +50,11 @@ public class TipsListAdapter extends FirebaseRecyclerAdapter<TipsListModel, Tips
 
     class myViewHolder extends RecyclerView.ViewHolder{
         TextView tvTipsListTitel, tvTipsListBeschrijving, tvTipsListCategorie;
+        // deze variabelen worden eveneens gebruikt voor de methode onBindHolder
         public myViewHolder(@NonNull View itemView){
             super(itemView);
+
+
 
             tvTipsListTitel= itemView.findViewById(R.id.tv_tip_item_titel); // tips_list_item.xml
             tvTipsListBeschrijving= itemView.findViewById(R.id.tv_tip_item_beschrijving);
