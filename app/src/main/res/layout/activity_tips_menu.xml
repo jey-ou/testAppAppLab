@@ -42,4 +42,16 @@
         app:layout_constraintEnd_toEndOf="@+id/btn_listview_ui_normal"
         app:layout_constraintStart_toStartOf="@+id/btn_listview_ui_normal"
         app:layout_constraintTop_toBottomOf="@+id/btn_listview_ui_normal" />
+
+    <Button
+        android:id="@+id/btn_tips_itemClick"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:text="Tips CRUD"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/btn_tips_upload"
+        app:layout_constraintStart_toStartOf="@+id/btn_tips_upload"
+        app:layout_constraintTop_toBottomOf="@+id/btn_tips_upload" />
 </androidx.constraintlayout.widget.ConstraintLayout>
