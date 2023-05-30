@@ -2,16 +2,22 @@ package com.example.testapp_applab.Tips;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.testapp_applab.MainActivity;
 import com.example.testapp_applab.R;
+import com.example.testapp_applab.SignInOut.SignInActivity;
+import com.example.testapp_applab.SignInOut.SignUpActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -32,6 +38,7 @@ public class NewTipUploadActivity extends AppCompatActivity {
     ArrayList<String>cat;
     ArrayAdapter<String> adapter;
     ValueEventListener listener;
+    ImageView imageView_tb_home,imageView_tb_login;
 
 
     @Override
@@ -39,11 +46,13 @@ public class NewTipUploadActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_tip_upload);
 
+        Toolbar toolbar = findViewById(R.id.veilig_thuis_toolbar);
+        setSupportActionBar(toolbar);
+
         setViews();
         loadSpinnerData();
 
         dataRef = FirebaseDatabase.getInstance().getReference().child("Tips");
-
 
         buttonAddClickListeners();
         setViews();
@@ -51,11 +60,13 @@ public class NewTipUploadActivity extends AppCompatActivity {
     }
 
     private void loadSpinnerData() {
-        //DatabaseReference database;
+        //opzetten spinner en onderdelen;
         dataSpinner = FirebaseDatabase.getInstance().getReference("TipsCat");
         cat = new ArrayList<>();
         adapter = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item,cat);
         spinner.setAdapter(adapter);
+
+        // ophalen data voor spinner uit realtime database
         listener = dataSpinner.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -67,46 +78,41 @@ public class NewTipUploadActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-        /*
-        database.addValueEventListener(new ValueEventListener(){
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot dataSnapshot: snapshot.getChildren()){
-                    String catnaam =snapshot.getValue(String.class);
-                    cat.add(catnaam);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
                 Log.w("NewTipUploadActivity", "failed to load gegevens");
             }
-
         });
-        if (cat == null) {
-            cat = new ArrayList<>();
-        }
 
-         */
     }
 
     private void setViews() {
+        imageView_tb_login = findViewById(R.id.second_image_view);
+        imageView_tb_home = findViewById(R.id.image_view);
+
         spinner = findViewById(R.id.spinner_tip_upload_categorie);
         tvTitel = findViewById(R.id.et_tips_Upload_titel);
         tvBeschrijving = findViewById(R.id.et_tip_upload_beschrijving);
+        btnSave = findViewById(R.id.btn_tip_upload_save);
+        btnClear= findViewById(R.id.btn_tips_upload_clear);
     }
 
     private void buttonAddClickListeners() {
-        btnSave = findViewById(R.id.btn_tip_upload_save);
+
         btnSave.setOnClickListener(view->{
             checkAndSave();
         });
-        btnClear= findViewById(R.id.btn_tips_upload_clear);
+
         btnClear.setOnClickListener(view->{
             clearform();
+        });
+
+        imageView_tb_login.setOnClickListener(view ->{
+            startActivity(new Intent(getApplicationContext(), SignInActivity.class));
+            finish();
+        });
+
+        imageView_tb_home.setOnClickListener(view -> {
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            finish();
         });
     }
 
@@ -123,7 +129,11 @@ public class NewTipUploadActivity extends AppCompatActivity {
 
         String txtTitel = tvTitel.getText().toString();
         String txtBeschrijving = tvBeschrijving.getText().toString();
-        // nog uit te breiden met resultaat spinner
+        if(categorie.equals("Geen categorie")){
+            Toast.makeText(getApplicationContext(),"Please choise a category",Toast.LENGTH_LONG).show();
+            return;
+        }
+        // nog uit te breiden met resultaat spinner = ok
 
         if (txtTitel.isEmpty()){
             tvTitel.setError("Please enter a title.");
@@ -133,6 +143,7 @@ public class NewTipUploadActivity extends AppCompatActivity {
             tvBeschrijving.setError("Please enter a disciption");
             tvBeschrijving.requestFocus();
         }
+        if (txtBeschrijving.isEmpty() || txtTitel.isEmpty()) return;
         String id = dataRef.push().getKey();
         TipsListModel model = new TipsListModel(id, categorie, txtBeschrijving,isVerwijderd, txtTitel);
 
@@ -146,6 +157,8 @@ public class NewTipUploadActivity extends AppCompatActivity {
                     tvBeschrijving.setText("");
                 }else{
                     Toast.makeText(getApplicationContext(),"Failure to load up",Toast.LENGTH_SHORT).show();
+                    // hier eventueel uit SharedPreferences een download van gegevens
+                    // of de spinner aanpassen zodat gegevens rechtstreeks kunnen ingeladen worden
                 }
             }
         });
