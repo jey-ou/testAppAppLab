@@ -25,7 +25,8 @@ public class TipsListActivity extends AppCompatActivity {
 
         FirebaseRecyclerOptions<TipsListModel> options =
                 new FirebaseRecyclerOptions.Builder<TipsListModel>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Tips"), TipsListModel.class)
+                        .setQuery(FirebaseDatabase.getInstance()
+                        .getReference().child("Tips"), TipsListModel.class)
                         .build();
 
         tipsListAdapter = new TipsListAdapter(options);

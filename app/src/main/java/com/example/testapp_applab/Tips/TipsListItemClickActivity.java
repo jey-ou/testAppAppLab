@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -48,10 +49,27 @@ public class TipsListItemClickActivity extends AppCompatActivity {
 
             @Override
             public void onBindViewHolder(@NonNull TipsViewHolder holder, int position, @NonNull TipsListModel model) {
-                //super.onBindViewHolder(holder, position, payloads);
-                holder.tvTitel.setText("" + model.getTitel());
-                holder.tvCategorie.setText("" + model.getCategorie());
-                holder.tvBeschrijving.setText("" + model.getBeschrijving());
+                //String id = model.getId();
+                //String titel = model.getTitel();
+                //String beschrijving = model.getBeschrijving();
+                //String categorie = model.getCategorie();
+
+                holder.tvTitel.setText(model.getTitel().toString());
+                holder.tvCategorie.setText(model.getCategorie().toString());
+                holder.tvBeschrijving.setText(model.getBeschrijving().toString());
+
+                String key = getRef(position).getKey();
+
+                holder.view.setOnClickListener(view ->{
+                    Intent intent = new Intent(getApplicationContext(),TipsCrudActivity.class);
+
+                    intent.putExtra("key", key);
+
+                    startActivity(intent);
+                    finish();
+
+                });
+
             }
 
         };

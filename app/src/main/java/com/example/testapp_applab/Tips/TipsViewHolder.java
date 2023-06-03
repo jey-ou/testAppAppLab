@@ -17,6 +17,6 @@ public class TipsViewHolder extends RecyclerView.ViewHolder{
         tvTitel = itemView.findViewById(R.id.tv_tip_item_titel);
         tvCategorie = itemView.findViewById(R.id.tv_tip_item_categorie);
         tvBeschrijving = itemView.findViewById(R.id.tv_tip_item_beschrijving);
-
+        view = itemView;
     }
 }
