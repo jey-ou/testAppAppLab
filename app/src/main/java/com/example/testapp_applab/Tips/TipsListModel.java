@@ -1,6 +1,11 @@
 package com.example.testapp_applab.Tips;
 
-public class TipsListModel {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import androidx.annotation.NonNull;
+
+public class TipsListModel implements Parcelable {
     String id, categorie, beschrijving, isVerwijderd, titel;
 
     public TipsListModel(String id, String categorie, String beschrijving, String isVerwijderd, String titel) {
@@ -52,5 +57,19 @@ public class TipsListModel {
 
     public void setTitel(String titel) {
         this.titel = titel;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(@NonNull Parcel parcel, int i) {
+        parcel.writeString(id);
+        parcel.writeString(categorie);
+        parcel.writeString(beschrijving);
+        parcel.writeString(isVerwijderd);
+        parcel.writeString(titel);
     }
 }
