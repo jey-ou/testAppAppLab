@@ -25,7 +25,7 @@ public class TipsSearchAdapter extends FirebaseRecyclerAdapter<TipsListModel, Ti
     }
     @Override
     protected void onBindViewHolder(@NonNull myViewHolder holder, int position, @NonNull TipsListModel model) {
-        holder.tvTipsListTitel.setText(model.getTitel());
+        holder.tvTipsListTitel.setText(model.getTitel().toLowerCase());
         holder.tvTipsListBeschrijving.setText(model.getBeschrijving());
         holder.tvTipsListCategorie.setText(model.getCategorie());
     }
