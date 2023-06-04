@@ -19,6 +19,26 @@ public class TipsListModel implements Parcelable {
     public TipsListModel() {
     }
 
+    protected TipsListModel(Parcel in) {
+        id = in.readString();
+        categorie = in.readString();
+        beschrijving = in.readString();
+        isVerwijderd = in.readString();
+        titel = in.readString();
+    }
+
+    public static final Creator<TipsListModel> CREATOR = new Creator<TipsListModel>() {
+        @Override
+        public TipsListModel createFromParcel(Parcel in) {
+            return new TipsListModel(in);
+        }
+
+        @Override
+        public TipsListModel[] newArray(int size) {
+            return new TipsListModel[size];
+        }
+    };
+
     public String getId() {
         return id;
     }
