@@ -105,6 +105,7 @@ public class SignUpActivity extends AppCompatActivity {
                                                     }
                                                 }
                                             });
+                                    //opslag in MyPrefs
                                 }else{
                                     Toast.makeText(SignUpActivity.this,"faillure authentification",Toast.LENGTH_LONG).show();
                                 }

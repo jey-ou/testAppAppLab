@@ -1,11 +1,13 @@
 package com.example.testapp_applab.Tips;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.testapp_applab.R;
@@ -13,6 +15,7 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
 public class TipsListAdapter extends FirebaseRecyclerAdapter<TipsListModel, TipsListAdapter.myViewHolder> {
+    //private OnTipListener onTipListener;
 
     /**
      * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
@@ -38,6 +41,9 @@ public class TipsListAdapter extends FirebaseRecyclerAdapter<TipsListModel, Tips
             .error(R.drawable.common_google_signin_button_normal)
             .into(holer.img);
         */
+        // hier de onclick listener op de holder
+        String key = getRef(position).getKey(); // getRef ingebakken instructie
+
     }
 
     @NonNull
@@ -48,17 +54,21 @@ public class TipsListAdapter extends FirebaseRecyclerAdapter<TipsListModel, Tips
         return new myViewHolder(view);
     }
 
-    class myViewHolder extends RecyclerView.ViewHolder{
+    class myViewHolder extends RecyclerView.ViewHolder {
         //CircleImageView img;
         TextView tvTipsListTitel, tvTipsListBeschrijving, tvTipsListCategorie;
-        // deze variabelen worden eveneens gebruikt voor de methode onBindHolder
-        public myViewHolder(@NonNull View itemView){
+        ConstraintLayout parentLayout;
+
+        public myViewHolder(@NonNull View itemView) {
             super(itemView);
 
             //img = itemView.findViewById(R.id.img1);
             tvTipsListTitel= itemView.findViewById(R.id.tv_tip_item_titel); // tips_list_item.xml
             tvTipsListBeschrijving= itemView.findViewById(R.id.tv_tip_item_beschrijving);
             tvTipsListCategorie = itemView.findViewById(R.id.tv_tip_item_categorie);
+
+            parentLayout = itemView.findViewById(R.id.cs_tip_record_layout);
+
         }
     }
 }

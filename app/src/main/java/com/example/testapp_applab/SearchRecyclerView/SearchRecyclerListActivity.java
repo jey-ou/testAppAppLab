@@ -4,11 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.Toast;
 
+import com.example.testapp_applab.MainActivity;
 import com.example.testapp_applab.R;
+import com.example.testapp_applab.SignInOut.SignInActivity;
 import com.example.testapp_applab.Tips.TipsListModel;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
@@ -17,11 +21,13 @@ public class SearchRecyclerListActivity extends AppCompatActivity {
     SearchRecyclerListAdapter adapter;
     RecyclerView recyclerView;
     SearchView searchView;
+    ImageView imageView_tb_home,imageView_tb_login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_recycler_list);
+        setMenubuttons();
 
         addSearchView();
         recyclerView = findViewById(R.id.rv_searchTips);
@@ -38,7 +44,21 @@ public class SearchRecyclerListActivity extends AppCompatActivity {
 
     }
 
+    private void setMenubuttons() {
+        // bij de attributen: ImageView imageView_tb_home,imageView_tb_login;
+        imageView_tb_login = findViewById(R.id.second_image_view);
+        imageView_tb_home = findViewById(R.id.image_view);
 
+        imageView_tb_login.setOnClickListener(view ->{
+            startActivity(new Intent(getApplicationContext(), SignInActivity.class));
+            finish();
+        });
+
+        imageView_tb_home.setOnClickListener(view -> {
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            finish();
+        });
+    }
     private void addSearchView() {
 
         searchView = findViewById(R.id.sv_search);

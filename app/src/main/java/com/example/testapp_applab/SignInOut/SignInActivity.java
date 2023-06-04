@@ -95,6 +95,6 @@ public class SignInActivity extends AppCompatActivity {
                 }
             }
         });
-
+        // nog lokale opslag in mijn prefs
     }
 }
