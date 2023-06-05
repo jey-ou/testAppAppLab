@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="4dp"
+    tools:context=".Tips.TipWeergaveActivity">
+
+    <include
+        android:id="@+id/include6"
+        layout="@layout/toolbar" />
+
+    <Button
+        android:id="@+id/btn_terugList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:text="@string/tip_weergave_terug"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_tipweergave_titel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="4dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include6" />
+
+    <TextView
+        android:id="@+id/tv_tipweergave_categorie"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="4dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/tv_tipweergave_titel"
+        app:layout_constraintStart_toStartOf="@+id/tv_tipweergave_titel"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tipweergave_titel" />
+
+    <TextView
+        android:id="@+id/tv_tipweergave_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="4dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_tipweergave_categorie"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tipweergave_categorie" />
+
+    <EditText
+        android:id="@+id/edm_tepweergave_beschrijving"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/btn_terugList"
+        app:layout_constraintEnd_toEndOf="@+id/tv_tipweergave_categorie"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_tipweergave_categorie"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tipweergave_id" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

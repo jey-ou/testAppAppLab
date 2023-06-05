@@ -30,6 +30,7 @@
     <string name="crude_update">update</string>
     <string name="seach_input">search</string>
     <string name="btn_tips_search">list searchView</string>
+    <string name="tip_weergave_terug">terug naar tiplijst</string>
 
     <string-array name="amino_acids_full_text">
         <item>Alanine</item>

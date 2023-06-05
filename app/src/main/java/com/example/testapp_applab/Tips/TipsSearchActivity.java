@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.widget.ImageView;
 import android.widget.SearchView;
@@ -17,7 +18,7 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 
 
-public class TipsSearchActivity extends AppCompatActivity {
+public class TipsSearchActivity extends AppCompatActivity implements TipsListAdapter.TipListListener {
 
     TipsListAdapter adapter;
     RecyclerView recyclerView;
@@ -41,7 +42,7 @@ public class TipsSearchActivity extends AppCompatActivity {
                                 .getReference().child("Tips"),TipsListModel.class )
                         .build();
 
-        adapter = new TipsListAdapter(options);
+        adapter = new TipsListAdapter(options,this);
         recyclerView.setAdapter(adapter);
     }
     private void setMenubuttons() {
@@ -88,7 +89,7 @@ public class TipsSearchActivity extends AppCompatActivity {
                                 .startAt(str)
                                 .endAt(str + "~"),
                         TipsListModel.class).build();
-        adapter = new TipsListAdapter(options);
+        adapter = new TipsListAdapter(options,this);
         adapter.startListening();
         recyclerView.setAdapter(adapter);
 
@@ -111,5 +112,14 @@ public class TipsSearchActivity extends AppCompatActivity {
         super.onStop();
         adapter.stopListening();
 
+    }
+
+    @Override
+    public void onTipClick(String key) {
+        String tekst = "ontvangen key" + key;
+        Log.d("ClickListener", tekst);
+        //String key = this.
+        //Intent intent = new Intent(this, new TipsCrudActivity.class);
+        //startActivity(intent);
     }
 }

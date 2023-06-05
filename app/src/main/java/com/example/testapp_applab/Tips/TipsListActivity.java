@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.testapp_applab.MainActivity;
 import com.example.testapp_applab.R;
@@ -14,7 +16,7 @@ import com.example.testapp_applab.SignInOut.SignInActivity;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class TipsListActivity extends AppCompatActivity { //implements TipsListAdapter.onTipListener {
+public class TipsListActivity extends AppCompatActivity implements TipsListAdapter.TipListListener{
 
     private RecyclerView recyclerView;
     private TipsListAdapter tipsListAdapter;
@@ -36,7 +38,7 @@ public class TipsListActivity extends AppCompatActivity { //implements TipsListA
                         .getReference().child("Tips"), TipsListModel.class)
                         .build();
 
-        tipsListAdapter = new TipsListAdapter(options);
+        tipsListAdapter = new TipsListAdapter(options, this);
         recyclerView.setAdapter(tipsListAdapter);
     }
 
@@ -68,4 +70,12 @@ public class TipsListActivity extends AppCompatActivity { //implements TipsListA
         tipsListAdapter.stopListening();
     }
 
+    @Override
+    public void onTipClick(String key) {
+        String tekst = "key is " + key;
+        Log.d ("ClickListener " , key);
+        //Toast.makeText(this, tekst, Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, TipWeergaveActivity.class).putExtra("key", key));
+        finish();
+    }
 }

@@ -35,10 +35,10 @@ public class TipsListItemClickActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tips_list_item_click);
+
         setMenubuttons();
 
         reference = FirebaseDatabase.getInstance().getReference("Tips");
-
         recyclerView = findViewById(R.id.rv_tip_itemclick);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -95,4 +95,5 @@ public class TipsListItemClickActivity extends AppCompatActivity {
             finish();
         });
     }
+
 }
