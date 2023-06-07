@@ -80,6 +80,10 @@ public class TipsSearchActivity extends AppCompatActivity implements TipsListAda
     }
 
     private void search(String str){
+        //klasse attributen
+        //TipsListAdapter adapter;
+        //RecyclerView recyclerView;
+        //SearchView searchView;
 
         FirebaseRecyclerOptions<TipsListModel> options = new FirebaseRecyclerOptions
                 .Builder<TipsListModel>()

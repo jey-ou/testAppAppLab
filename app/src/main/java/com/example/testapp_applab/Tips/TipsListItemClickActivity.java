@@ -80,6 +80,30 @@ public class TipsListItemClickActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
     }
+
+    private void search(String str){
+        // dit toepassen vraagt een herziening van de code en is nu niet aan de orde
+        // de bedoeling van deze demo is op een snelle (maar verkeerde wijze)
+        // een itemclick alternatie te bieden.
+        // klasse attributen
+        // TipsListAdapter adapter;
+        // RecyclerView recyclerView;
+        // SearchView searchView;
+
+        /*
+        FirebaseRecyclerOptions<TipsListModel> options = new FirebaseRecyclerOptions
+                .Builder<TipsListModel>()
+                .setQuery(FirebaseDatabase.getInstance()
+                                .getReference().child("Tips")
+                                .orderByChild("titel")
+                                .startAt(str)
+                                .endAt(str + "~"),
+                        TipsListModel.class).build();
+        adapter = new TipsListAdapter(options,this);
+        adapter.startListening();
+        recyclerView.setAdapter(adapter);
+        */
+    }
     private void setMenubuttons() {
         // bij de attributen: ImageView imageView_tb_home,imageView_tb_login;
         imageView_tb_login = findViewById(R.id.second_image_view);

@@ -143,4 +143,15 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/SharedPrefListV"
         app:layout_constraintTop_toBottomOf="@+id/SharedPrefListV" />
+
+    <Button
+        android:id="@+id/btn_frag_menu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:text="@string/btn_menu_frag"
+        app:layout_constraintEnd_toEndOf="@+id/btn_TipsMenu"
+        app:layout_constraintStart_toStartOf="@+id/btn_TipsMenu"
+        app:layout_constraintTop_toBottomOf="@+id/btn_TipsMenu" />
 </androidx.constraintlayout.widget.ConstraintLayout>

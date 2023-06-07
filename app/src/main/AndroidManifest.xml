@@ -12,6 +12,15 @@
         android:theme="@style/Theme.TestAppAppLab"
         tools:targetApi="31">
         <activity
+            android:name=".FrameManager.UseFragmentManagerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FragmentsBasic.FragmentMenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FragmentsBasic.FragmentBasicActivity"
+            android:exported="false" />
+        <activity
             android:name=".Tips.TipWeergaveActivity"
             android:exported="false" />
         <activity
