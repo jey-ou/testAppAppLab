@@ -13,12 +13,24 @@
         android:layout_marginStart="141dp"
         android:layout_marginTop="86dp"
         android:layout_marginEnd="179dp"
-        android:layout_marginBottom="597dp"
         android:background="@drawable/button_veilig_thuis_homescreen"
         android:backgroundTint="@color/veiligthuis_blauw"
         android:text="@string/btn_frame_Basics"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_frag_com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:padding="4dp"
+        android:text="communicatie"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/btn_basic_frag_basics"
+        app:layout_constraintStart_toStartOf="@+id/btn_basic_frag_basics"
+        app:layout_constraintTop_toBottomOf="@+id/btn_basic_frag_basics" />
 </androidx.constraintlayout.widget.ConstraintLayout>
