@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.testapp_applab.AdapterDemos.ListViewArrayAdapter;
 import com.example.testapp_applab.Buttons.ButtonExampleActivity;
 import com.example.testapp_applab.CallBackActivity;
+import com.example.testapp_applab.FragmentsBasic.FragmentMenuActivity;
 import com.example.testapp_applab.JSONdemo.GsonActivity;
 import com.example.testapp_applab.JSONdemo.JsonDemoActivity;
 import com.example.testapp_applab.ListViewLocalJson.ListViewMetInvoerActivity;
@@ -51,6 +52,7 @@ public class TestenActivity extends AppCompatActivity {
         Button btnSharedPreference = findViewById(R.id.btn_test_sf);
         Button btnShrdPrefListView = findViewById(R.id.SharedPrefListV);
         Button btnTipsMenu = findViewById(R.id.btn_TipsMenu);
+        Button btnFragMenu =findViewById(R.id.btn_frag_menu);
 
         btn_primair.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,6 +115,10 @@ public class TestenActivity extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), TipsMenuActivity.class));
         });
 
+        btnFragMenu.setOnClickListener(view ->{
+            startActivity(new Intent(getApplicationContext(), FragmentMenuActivity.class));
+        });
+
     }
 
     public void recycler(){
@@ -124,6 +130,7 @@ public class TestenActivity extends AppCompatActivity {
         Intent intent = new Intent (getApplicationContext(), ButtonExampleActivity.class);
         startActivity(intent);
     }
+
 
 }
 

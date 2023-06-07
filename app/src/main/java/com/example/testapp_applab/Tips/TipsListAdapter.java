@@ -1,15 +1,11 @@
 package com.example.testapp_applab.Tips;
 
-import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.testapp_applab.R;
@@ -36,14 +32,7 @@ public class TipsListAdapter extends FirebaseRecyclerAdapter<TipsListModel, Tips
         holder.tvTipsListTitel.setText(model.getTitel());
         holder.tvTipsListBeschrijving.setText(model.getBeschrijving());
         holder.tvTipsListCategorie.setText(model.getCategorie());
-        /*
-        Glide.with(holder.img.getContext())
-            .load(model.getSurl())
-            .placeholder(R.drawable.common_google_signin_button_dark
-            .circleCrop()
-            .error(R.drawable.common_google_signin_button_normal)
-            .into(holer.img);
-        */
+
         // hier de onclick listener op de holder
         String key = getRef(position).getKey(); // getRef ingebakken instructie
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -64,15 +53,13 @@ public class TipsListAdapter extends FirebaseRecyclerAdapter<TipsListModel, Tips
     }
 
     class myViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        //CircleImageView img;
         TextView tvTipsListTitel, tvTipsListBeschrijving, tvTipsListCategorie;
-        TipListListener tipListListener;
+        //TipListListener tipListListener;
 
 
         public myViewHolder(@NonNull View itemView, TipListListener tiplistener) {
             super(itemView);
 
-            //img = itemView.findViewById(R.id.img1);
             tvTipsListTitel= itemView.findViewById(R.id.tv_tip_item_titel); // tips_list_item.xml
             tvTipsListBeschrijving= itemView.findViewById(R.id.tv_tip_item_beschrijving);
             tvTipsListCategorie = itemView.findViewById(R.id.tv_tip_item_categorie);
@@ -82,13 +69,10 @@ public class TipsListAdapter extends FirebaseRecyclerAdapter<TipsListModel, Tips
 
         @Override
         public void onClick(View view) {
-            //tipListListener.onTipClick(getRef(getBindingAdapterPosition()).getKey());// crash
-            //tipListListener.onTipClick(key);//crash
-            //String tekst = "key is " + key;
 
-            //Log.d("ClickListener", tekst);
-            //Intent intent = new Intent (this, )
         }
+
+
     }
     public interface TipListListener{
         void onTipClick(String key);
