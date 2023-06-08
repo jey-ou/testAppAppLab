@@ -21,7 +21,7 @@
     <string name="tip_upload_beschrijving">Beschrijving</string>
     <string name="tip_upload_titel">titel</string>
     <string name="btn_tips_loadup_save">Save Tip</string>
-    <string name="btn_tips_loadup_clear"></string>
+    <string name="btn_tips_loadup_clear">Clear</string>
     <string name="tv_tip_load_new_header">Maak een nieuwe tip aan</string>
     <string name="btn_tips_upload_clear">wis formulier</string>
     <string name="btn_tip_menu_upload">create new tip</string>
@@ -180,5 +180,9 @@
     <string name="btn_frame_Basics">Basics</string>
     <string name="btn_menu_frag">Fragments</string>
     <string name="tvHeaderBasicFrames">Demo Frame Basics</string>
+    <string name="fragVM_header">Shared ViewModel voorbeeld</string>
+    <string name="fragVM_Algemeen">message</string>
+    <string name="send">send</string>
+    <string name="Send">send</string>
 
 </resources>
