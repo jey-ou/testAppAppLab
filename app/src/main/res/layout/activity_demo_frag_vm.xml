@@ -7,19 +7,36 @@
     android:layout_height="match_parent"
     tools:context=".FragmentsVM.DemoFragVM">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <FrameLayout
             android:id="@+id/container_a"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content">
+
+        </FrameLayout>
 
         <FrameLayout
             android:id="@+id/container_b"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_fragVM_menu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:padding="8dp"
+        android:text="fragmentMenu"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

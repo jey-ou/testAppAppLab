@@ -2,6 +2,7 @@ package com.example.testapp_applab.FragmentsVM;
 
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ import com.example.testapp_applab.R;
 
 
 public class FragmentVmA extends Fragment {
+    private SharedViewModel viewModel;
     EditText editText;
     Button btn_send;
 
@@ -35,8 +37,14 @@ public class FragmentVmA extends Fragment {
         return view;
     }
 
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState){
+        super.onActivityCreated(savedInstanceState);
+    }
+
     private void addClickableView() {
         btn_send.setOnClickListener(view ->{
+            viewModel.setText(editText.getText());
             // TODO aanvullen
         });
     }

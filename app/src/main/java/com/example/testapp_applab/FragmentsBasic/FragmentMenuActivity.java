@@ -8,11 +8,13 @@ import android.os.Bundle;
 import android.widget.Button;
 
 import com.example.testapp_applab.CommFragFrag.FragFragComActivity;
+import com.example.testapp_applab.FragmentsVM.DemoFragVM;
+import com.example.testapp_applab.FrameManager.DemoFMActivity;
 import com.example.testapp_applab.R;
 
 public class FragmentMenuActivity extends AppCompatActivity {
 
-    Button basic, communication;
+    Button basic, communication, viewmodel, comm2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,18 @@ public class FragmentMenuActivity extends AppCompatActivity {
         communication = findViewById(R.id.btn_frag_com);
         communication.setOnClickListener(view ->{
             startActivity(new Intent(getApplicationContext(), FragFragComActivity.class));
+            finish();
+        });
+
+        viewmodel = findViewById(R.id.frag_VM);
+        viewmodel.setOnClickListener(view ->{
+            startActivity(new Intent(getApplicationContext(), DemoFragVM.class));
+            finish();
+        });
+
+        comm2 = findViewById(R.id.frag_VM);
+        comm2.setOnClickListener(view ->{
+            startActivity(new Intent(getApplicationContext(), DemoFMActivity.class));
             finish();
         });
 
