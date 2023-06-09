@@ -184,5 +184,8 @@
     <string name="fragVM_Algemeen">message</string>
     <string name="send">send</string>
     <string name="Send">send</string>
+    <string name="tv_headerFM_Demo">Demo communicatie tussen Frames</string>
+    <string name="fragment1">fragment 1</string>
+    <string name="fragment2">fragment 2</string>
 
 </resources>
