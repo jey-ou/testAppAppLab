@@ -148,9 +148,10 @@
         android:id="@+id/btn_frag_menu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/button_veilig_thuis_homescreen"
         android:text="@string/btn_menu_frag"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/btn_TipsMenu"
         app:layout_constraintStart_toStartOf="@+id/btn_TipsMenu"
         app:layout_constraintTop_toBottomOf="@+id/btn_TipsMenu" />

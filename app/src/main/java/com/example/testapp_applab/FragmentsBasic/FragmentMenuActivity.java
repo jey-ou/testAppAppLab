@@ -21,8 +21,6 @@ public class FragmentMenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment_menu);
 
-
-
         addClickButtons();
     }
 
@@ -40,21 +38,18 @@ public class FragmentMenuActivity extends AppCompatActivity {
             finish();
         });
 
-        viewmodel = findViewById(R.id.frag_VM);
+        viewmodel = findViewById(R.id.btnComFM);
         viewmodel.setOnClickListener(view ->{
-            startActivity(new Intent(getApplicationContext(), DemoFragVM.class));
+            startActivity(new Intent(getApplicationContext(), DemoFMActivity.class));
             finish();
         });
 
         comm2 = findViewById(R.id.frag_VM);
         comm2.setOnClickListener(view ->{
-            startActivity(new Intent(getApplicationContext(), DemoFMActivity.class));
+            startActivity(new Intent(getApplicationContext(), DemoFragVM.class));
             finish();
         });
 
-
     }
-
-
 
 }
