@@ -27,7 +27,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/btnFragFM1"
+        app:layout_constraintBottom_toTopOf="@+id/btnFragFM2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_headerFM_Demo">
@@ -35,30 +35,53 @@
         <FrameLayout
             android:id="@+id/frameFM_Demo2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="4dp">
 
         </FrameLayout>
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnFragFM1"
-        android:layout_width="204dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:background="@drawable/button_veilig_thuis_homescreen"
-        android:text="@string/fragment1"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
         android:id="@+id/btnFragFM2"
-        android:layout_width="204dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/button_veilig_thuis_homescreen"
         android:text="@string/fragment2"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_back_menuFrag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnFragFM1" />
+
+    <Button
+        android:id="@+id/btnFragFM1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:text="@string/fragment1"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btn_back_menuFrag"
+        app:layout_constraintEnd_toStartOf="@+id/btnFragFM2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_back_menuFrag"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:text="terug naar fragment menu"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

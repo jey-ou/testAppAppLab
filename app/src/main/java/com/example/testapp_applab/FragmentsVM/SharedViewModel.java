@@ -14,5 +14,8 @@ public class SharedViewModel extends ViewModel {
     public LiveData<CharSequence> getText() {
         return text;
     }
+    public LiveData<CharSequence> getSelectedItem(){
+        return text;
+    }
 
 }

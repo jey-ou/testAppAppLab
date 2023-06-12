@@ -5,28 +5,27 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.TextView;
 
-import com.example.testapp_applab.CommFragFrag.FragFragComActivity;
 import com.example.testapp_applab.FragmentsBasic.FragmentMenuActivity;
 import com.example.testapp_applab.R;
 
 public class DemoFragVM extends AppCompatActivity {
-    //private NoteViewModel noteViewModel;
+    //private SharedViewModel viewModel;
 
     Button btn_menu;
+    //TextView fragmentText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo_frag_vm);
 
-        //noteViewModel = viewModelProviders.of(this).get(NoteViewModel.class);
-        //noteViewModel.getAllNotes().observe(this);
-
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.container_a, new FragmentVmA())
                 .add(R.id.container_b, new FragmentVmB())
                 .commit();
+
         addClickableViews();
     }
 

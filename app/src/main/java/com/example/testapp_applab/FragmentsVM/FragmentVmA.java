@@ -2,8 +2,11 @@ package com.example.testapp_applab.FragmentsVM;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,20 +35,25 @@ public class FragmentVmA extends Fragment {
         editText = view.findViewById(R.id.et_fragvm_a);
         btn_send = view.findViewById(R.id.btn_fragvm_a);
 
-        addClickableView();
-        // Inflate the layout for this fragment
+        btn_send.setOnClickListener(v->{
+            viewModel.setText(editText.getText());
+        });
+
         return view;
     }
 
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState){
-        super.onActivityCreated(savedInstanceState);
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        viewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
+        viewModel.getText().observe(getViewLifecycleOwner(), new Observer<CharSequence>() {
+            @Override
+            public void onChanged(CharSequence charSequence) {
+                editText.setText(charSequence);
+            }
+        });
+
     }
 
-    private void addClickableView() {
-        btn_send.setOnClickListener(view ->{
-            viewModel.setText(editText.getText());
-            // TODO aanvullen
-        });
-    }
 }
