@@ -9,12 +9,23 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TestAppAppLab"
+        android:theme="@style/MyAppTheme"
         tools:targetApi="31">
         <activity
-            android:name=".FragmentDrawer.FragmentDrawerActivity"
-            android:theme="@style/AppTheme.NoActionBar"
+            android:name=".ProblemSolvers.ProblemSolverMenuActivity"
             android:exported="false" />
+        <activity
+            android:name=".ProblemSolvers.ScreenOrientationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProblemSolvers.OrientationActivity"
+            android:exported="false"
+            android:label="@string/title_activity_orientation"
+            android:theme="@style/MyAppTheme" />
+        <activity
+            android:name=".FragmentDrawer.FragmentDrawerActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".FrameManager.DemoFMActivity"
             android:exported="false" />
@@ -119,7 +130,8 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

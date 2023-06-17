@@ -11,6 +11,7 @@ import com.example.testapp_applab.FragmentsBasic.FragmentMenuActivity;
 import com.example.testapp_applab.JSONdemo.GsonActivity;
 import com.example.testapp_applab.JSONdemo.JsonDemoActivity;
 import com.example.testapp_applab.ListViewLocalJson.ListViewMetInvoerActivity;
+import com.example.testapp_applab.ProblemSolvers.ProblemSolverMenuActivity;
 import com.example.testapp_applab.R;
 import com.example.testapp_applab.RecyclerViewer.RecyclerViewActivity;
 import com.example.testapp_applab.TestVerbinding;
@@ -53,6 +54,7 @@ public class TestenActivity extends AppCompatActivity {
         Button btnShrdPrefListView = findViewById(R.id.SharedPrefListV);
         Button btnTipsMenu = findViewById(R.id.btn_TipsMenu);
         Button btnFragMenu =findViewById(R.id.btn_frag_menu);
+        Button btnOrientation = findViewById(R.id.btn_orientatie_menu);
 
         btn_primair.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -117,6 +119,10 @@ public class TestenActivity extends AppCompatActivity {
 
         btnFragMenu.setOnClickListener(view ->{
             startActivity(new Intent(getApplicationContext(), FragmentMenuActivity.class));
+        });
+
+        btnOrientation.setOnClickListener(view ->{
+            startActivity(new Intent(getApplicationContext(), ProblemSolverMenuActivity.class));
         });
 
     }

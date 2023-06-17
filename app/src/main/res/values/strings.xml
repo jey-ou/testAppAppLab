@@ -33,6 +33,9 @@
     <string name="tip_weergave_terug">terug naar tiplijst</string>
     <string name="frame_basics1">frame 1</string>
     <string name="btn_frambasics2">frame 2</string>
+    <string name="menu_open">open</string>
+    <string name="close_menu">close</string>
+
 
     <string-array name="amino_acids_full_text">
         <item>Alanine</item>
@@ -181,11 +184,17 @@
     <string name="btn_menu_frag">Fragments</string>
     <string name="tvHeaderBasicFrames">Demo Frame Basics</string>
     <string name="fragVM_header">Shared ViewModel voorbeeld</string>
+    <string name="fragVM_header1">Shared ViewModel fragment A</string>
+    <string name="fragVM_header2">Shared ViewModel fragment B</string>
     <string name="fragVM_Algemeen">message</string>
     <string name="send">send</string>
     <string name="Send">send</string>
     <string name="tv_headerFM_Demo">Demo communicatie tussen Frames</string>
     <string name="fragment1">fragment 1</string>
     <string name="fragment2">fragment 2</string>
+    <string name="fm1_vm_wissen">wissen</string>
+    <string name="title_activity_orientation">OrientationActivity</string>
+    <string name="hearder_problems">Submenu problem solvers</string>
+    <string name="terug_naar_algmeen_submenu">Terug naar algemeen menu</string>
 
 </resources>

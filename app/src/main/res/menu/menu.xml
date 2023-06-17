@@ -9,11 +9,11 @@
             android:title="Melding aanmaken" />
         <item
             android:id="@+id/nav_tips"
-            android:icon="@drawable/search_icon"
+            android:icon="@drawable/tips"
             android:title="tips inzien" />
         <item
             android:id="@+id/nav_msgs"
-            android:icon="@drawable/send"
+            android:icon="@drawable/send_and_archive"
             android:title="MijnMeldingen" />
 
     </group>
@@ -21,11 +21,11 @@
         <menu>
             <item
                 android:id="@+id/nav_share"
-                android:icon="@drawable/button_veilig_thuis_homescreen"
+                android:icon="@drawable/veilig_thuis_logo234x"
                 android:title="share" />
             <item
                 android:id="@+id/nav_sharesend"
-                android:icon="@drawable/send"
+                android:icon="@drawable/veilig_thuis_logo234x"
                 android:title="Verzenden" />
         </menu>
     </item>

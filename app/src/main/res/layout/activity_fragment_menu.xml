@@ -67,4 +67,17 @@
         app:layout_constraintEnd_toEndOf="@+id/btn_frag_com"
         app:layout_constraintStart_toStartOf="@+id/btn_frag_com"
         app:layout_constraintTop_toBottomOf="@+id/btn_frag_com" />
+
+    <Button
+        android:id="@+id/drawerFDW"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:text="Drawer"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/frag_VM"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/frag_VM"
+        app:layout_constraintTop_toBottomOf="@+id/frag_VM" />
 </androidx.constraintlayout.widget.ConstraintLayout>

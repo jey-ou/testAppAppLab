@@ -20,7 +20,7 @@ import com.example.testapp_applab.R;
 public class FragmentVmB extends Fragment {
     private SharedViewModel viewModel;
     private EditText editText;
-    private Button btn_send;
+    private Button btn_send, btn_wissen;
 
     public FragmentVmB() {
         // Required empty public constructor
@@ -33,11 +33,15 @@ public class FragmentVmB extends Fragment {
 
         editText = view.findViewById(R.id.et_fragvm_b);
         btn_send = view.findViewById(R.id.btn_fragvm_b);
+        btn_wissen = view.findViewById(R.id.btn_fmVMb);
 
         btn_send.setOnClickListener(v->{
             viewModel.setText(editText.getText());
         });
 
+        btn_wissen.setOnClickListener(v->{
+            viewModel.setText("");
+        });
         return view;
     }
 
