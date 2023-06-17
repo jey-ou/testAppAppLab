@@ -8,13 +8,14 @@ import android.os.Bundle;
 import android.widget.Button;
 
 import com.example.testapp_applab.CommFragFrag.FragFragComActivity;
+import com.example.testapp_applab.FragmentDrawer.FragmentDrawerActivity;
 import com.example.testapp_applab.FragmentsVM.DemoFragVM;
 import com.example.testapp_applab.FrameManager.DemoFMActivity;
 import com.example.testapp_applab.R;
 
 public class FragmentMenuActivity extends AppCompatActivity {
 
-    Button basic, communication, viewmodel, comm2;
+    Button basic, communication, viewmodel, comm2, drawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,11 @@ public class FragmentMenuActivity extends AppCompatActivity {
             finish();
         });
 
+        drawer = findViewById(R.id.drawerFDW);
+        drawer.setOnClickListener(view ->{
+            startActivity(new Intent(getApplicationContext(), FragmentDrawerActivity.class));
+            finish();
+        });
     }
 
 }

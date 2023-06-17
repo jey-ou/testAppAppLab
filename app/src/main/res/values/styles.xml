@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name ="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name = "colorPrimary">@color/design_default_color_primary</item>
-        <item name="colorPrimaryDark">@color/design_default_color_primary_dark</item>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+
         <item name="colorAccent">@color/design_default_color_primary_variant</item>
+
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimaryDark">@color/veiligthuis_blauw</item>
+        <item name="colorPrimary">@color/veiligthuis_blauw</item>
+        <item name="drawerArrowStyle">@style/DrawerColor</item>
+
     </style>
+
     <style name="vertical">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
     </style>
+
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="DrawerColor" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/white</item>
     </style>
 
 </resources>

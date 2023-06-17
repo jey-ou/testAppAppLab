@@ -8,18 +8,21 @@
     tools:context=".FragmentsVM.FragmentVmA">
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
         android:id="@+id/tv_fragvm_headerb"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:background="@color/veiligthuis_blauw"
         android:padding="8dp"
-        android:text="@string/fragVM_header"
+        android:text="@string/fragVM_header1"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,8 +42,9 @@
 
     <Button
         android:id="@+id/btn_fragvm_a"
-        android:layout_width="wrap_content"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/button_veilig_thuis_homescreen"
@@ -48,8 +52,22 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_fragvm_a" />
+
+    <Button
+        android:id="@+id/btnFM1wissen"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button_veilig_thuis_homescreen"
+        android:text="@string/fm1_vm_wissen"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_fragvm_a"
         app:layout_constraintTop_toBottomOf="@+id/et_fragvm_a" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
