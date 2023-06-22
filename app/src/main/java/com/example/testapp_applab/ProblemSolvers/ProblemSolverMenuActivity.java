@@ -23,6 +23,10 @@ public class ProblemSolverMenuActivity extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), ScreenOrientationActivity.class));
         });
 
+        btn_sharePrefs.setOnClickListener(view ->{
+            startActivity(new Intent(getApplicationContext(), OrientationSharedPrefsActivity.class));
+        });
+
 
     }
 }

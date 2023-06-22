@@ -196,5 +196,7 @@
     <string name="title_activity_orientation">OrientationActivity</string>
     <string name="hearder_problems">Submenu problem solvers</string>
     <string name="terug_naar_algmeen_submenu">Terug naar algemeen menu</string>
+    <string name="wissen">Wissen</string>
+    <string name="reset_values">reset Values</string>
 
 </resources>
