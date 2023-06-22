@@ -12,16 +12,20 @@
         android:theme="@style/MyAppTheme"
         tools:targetApi="31">
         <activity
+            android:name=".Voorbeelden.SetTestConditionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProblemSolvers.SharedPrefsRecyclerViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProblemSolvers.OrientationSharedPrefsActivity"
+            android:exported="false" />
+        <activity
             android:name=".ProblemSolvers.ProblemSolverMenuActivity"
             android:exported="false" />
         <activity
             android:name=".ProblemSolvers.ScreenOrientationActivity"
             android:exported="false" />
-        <activity
-            android:name=".ProblemSolvers.OrientationActivity"
-            android:exported="false"
-            android:label="@string/title_activity_orientation"
-            android:theme="@style/MyAppTheme" />
         <activity
             android:name=".FragmentDrawer.FragmentDrawerActivity"
             android:exported="false"

@@ -67,10 +67,22 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:background="@color/veiligthuis_blauw"
         android:text="Button"
         app:layout_constraintEnd_toEndOf="@+id/btnSV"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/btn_listview_ui_normal"
         app:layout_constraintStart_toStartOf="@+id/btnSV"
         app:layout_constraintTop_toBottomOf="@+id/btnSV" />
+
+    <Button
+        android:id="@+id/btnSP"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="@+id/btn_tip_search"
+        app:layout_constraintStart_toEndOf="@+id/btn_tips_itemClick"
+        app:layout_constraintTop_toBottomOf="@+id/btn_tip_search" />
 </androidx.constraintlayout.widget.ConstraintLayout>

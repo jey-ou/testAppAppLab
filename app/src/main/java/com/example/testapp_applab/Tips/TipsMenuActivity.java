@@ -7,13 +7,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
+import com.example.testapp_applab.ProblemSolvers.SharedPrefsRecyclerViewActivity;
 import com.example.testapp_applab.R;
 import com.example.testapp_applab.SearchRecyclerView.SearchRecyclerListActivity;
 
 public class TipsMenuActivity extends AppCompatActivity {
 
     Button btnListView_ui, button_loadup, btnClickItem, btnSeachView,btnTipsSearch;
-
+    Button btnShPrefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,11 @@ public class TipsMenuActivity extends AppCompatActivity {
         btnTipsSearch = findViewById(R.id.btn_tip_search);
         btnTipsSearch.setOnClickListener(view ->{
             startActivity(new Intent(getApplicationContext(), TipsSearchActivity.class));
+        });
+
+        btnShPrefs = findViewById(R.id.btnSP);
+        btnShPrefs.setOnClickListener(view->{
+            startActivity(new Intent(getApplicationContext(), SharedPrefsRecyclerViewActivity.class));
         });
 
     }
